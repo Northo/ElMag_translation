@@ -1,0 +1,112 @@
+%      Master-fil for Laboppgavetekster i Elmag.
+% 11.jan 2011
+
+\documentclass[12pt,twoside,norsk]{book}  % [twoside] is default in book.  
+\usepackage[utf8]{inputenc}  % Lar oss skrive norske tegn
+\usepackage[norsk]{babel}    % Tilpasning til norsk
+
+\usepackage{graphicx}       % For å inkludere *.eps 
+\graphicspath{{fig/}{../fig/}}
+
+\usepackage{subfiles}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Mange makroer for pen fysikknotasjon inkl. differensialer
+\usepackage{physics}
+
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\quart}{\frac{1}{4}}
+
+\input{hyph_no.tex}  % Ekstraliste for 'hyphenation' av norske ord
+\hyphenation{del-kapittel}
+\usepackage{xcolor}
+
+\usepackage{siunitx}
+    \sisetup{
+        separate-uncertainty    = true,
+        output-decimal-marker   = {,},
+        exponent-product        = \cdot,
+        detect-all              = true,
+    }
+    \DeclareSIUnit{\gauss}{gauss}
+    \DeclareSIUnit{\G}{G}
+    \DeclareSIUnit{\viklinger}{viklinger}
+    \DeclareSIUnit{\elektroner}{elektroner}
+    
+\usepackage{caption}
+    \captionsetup{%
+        font = {sf, small}
+    }
+\newcommand{\linkcolor}{blue}%{0,0,0.5}
+\usepackage[colorlinks=true,linkcolor=\linkcolor,urlcolor=\linkcolor]{hyperref} 
+\font\itsf =cmssi10 scaled\magstep 1
+\font\itsfs =cmssi10 scaled\magstep 0
+\usepackage{epic,curves}
+\usepackage{overpic}
+% \usepackage{makeidx}
+\usepackage{epstopdf}
+\usepackage[multiple]{footmisc}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\font\itsf =cmssi12 scaled\magstep 0
+% \makeindex
+\setlength{\textheight}{245mm} % \textheight 265mm  % 230 mm std.
+\setlength{\textwidth}{158mm} % 165 med oddsidemargin -5mm og evensidemargin 0mm
+\topmargin -15mm %\topmargin -25mm
+\oddsidemargin 4mm %\oddsidemargin -5mm %0mm MolBiofys: 13mm
+\evensidemargin -4mm %0mm
+\parindent 0mm
+\parskip 3mm
+\hyphenation{
+%be-hand-ling be-hand-lin-gene be-hand-lingen
+inn-deling inn-del-ingen inn-del-ingene
+ka-pit-tel-inn-deling ka-pit-tel-inn-del-ingen ka-pit-tel-inn-del-ingene
+kor-te kor-tere
+tall-ver-di tall-ver-dien tall-ver-dier tall-ver-di-ene
+leve-tid leve-tiden
+be-trakt-ninger be-trakt-ning be-trakt-ningen
+fase-for-skjell fase-for-skjel-len fase-for-skjel-lene
+so-le-no-ide so-le-no-iden so-le-no-idene 
+da-ta-punktene be-skri-velse 
+% her kan føres inn ord som deles feil (føres inn i hyph_no.tex ved opprydding): eks: be-stem-melse be-stem-mel-sen
+% æ ø å godtas ikke!
+}
+
+
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+
+\begin{document}
+
+
+
+\pagestyle{headings}
+\setlength{\abovedisplayshortskip}{-2mm}
+\pagenumbering{Alph}
+
+\parskip 4mm
+\pagestyle{empty}
+\subfile{tex/forside}
+
+\parskip 0.5mm
+\pagestyle{headings}
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+
+\parskip 4mm
+\pagenumbering{arabic}
+
+\subfile{tex/kapittel1}
+%\subfile{tex/kapittel2}
+\subfile{tex/kapittel3}
+\subfile{tex/kapittel4}
+\subfile{tex/kapittel5}
+\subfile{bibliografi}
+
+%******************************
+\end{document}
+%******************************
