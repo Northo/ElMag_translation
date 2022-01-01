@@ -1,0 +1,371 @@
+[1.0]
+
+
+[2.0]{LORENTZKRAFTEN [2.1]}
+
+[2.2]{Mål}
+
+Du skal i denne laboratorieoppgaven
+[2.3]
+[2.4]
+    [2.5] dokumentere eksperiment i labjournalen
+    [2.6] foreta feilanalyse av eksperimentet.
+    [2.7] bruke numeriske metoder for å modellere eksperimentet
+    [2.8] studere krefter på elektroner i homogene og konstante elektriske og magnetiske felt,
+    [2.9] bestemme forholdet [2.10] mellom elektronets ladning [2.11] og masse [2.12] (Thomsoneksperimentet),
+[2.13]
+[2.14]
+
+[2.15]
+[2.16]{Teoretisk bakgrunn}
+[2.17]
+
+Teorien presenteres i samband med presentasjonen av beregningsoppgavene nedenfor. Det vises også til lærebok og forelesningene i elektromagnetisme.
+
+[2.18]
+[2.19]{Beregningsoppgaver [2.20]}
+[2.21]
+
+[2.22]{Lorentzkraften}
+[2.23]
+
+Kraften fra elektriske og magnetiske felt på ladde partikler kalles gjerne Lorentzkraften. Kraften på en ladd partikkel med ladning [2.24] som beveger seg med hastighet [2.25] i et elektrostatisk felt [2.26] og et magnetostatisk felt [2.27] er gitt ved 
+[1.1]
+[2.28]
+For å lage en hurtig elektronstråle brukes alltid elektriske felt for å akselerere elektronene. Uttrykket for Lorentzkraften viser imidlertid at både elektriske og magnetiske felt gir kraftvirkning på ladde partikler. 
+
+{[2.29] 1. Forklar ut i fra uttrykket for Lorentzkraften hvorfor magnetiske felt (i motsetning til elektriske felt) ikke kan gi en ladd partikkel økt kinetisk energi.}
+
+[2.30]{Ladninger i [2.31]-felt}
+[2.32]
+
+Et homogent elektrisk felt settes lettest opp mellom to parallelle plateleektroder. Denne geometrien gir et elektrisk felt [2.33] hvor [2.34] er spenningen mellom platene og [2.35] avstanden mellom dem. En ladd partikkel med ladning [2.36] og masse [2.37] blir under passasje mellom platene akselerert med en akselerasjon 
+[1.2]
+[2.38]
+Dette anvendes i kilder for ladde partikkelstråler. 
+
+Figur [2.39] viser hvordan en elektronstrålekilde kan lages. Et wolfram-filament varmes opp ved at elektrisk strøm passerer gjennom det. Når det er rødglødende sender det ut elektroner fra overflata. Filamentet plasseres like bak en plateelektrode med hull i. Spenning legges mellom filamentet og plateelektroden. Elektronene blir akselerert mot plateelektroden og de elektronene som passerer hullet går ut i en stråle på andre siden av plata. En annen måte å lage elektroner i elektronkilder er å bruke en oksidkatode som blir varmet opp indirekte av et filament. Denne konstruksjonen gir bedre feltforhold under akselerasjonen, og det er denne utgaven som er vist i figur [2.40].
+[2.41]
+
+[1.3]
+
+Anta at et elektron blir akselerert fra stillstand til en spenning på [2.42] i et statisk elektrisk felt. 
+
+{[2.43] 2. Hva blir hastigheten til elektronet etter akselerasjonen? }
+
+I partikkelakseleratorfysikk brukes energienheten "elektronvolt", forkortet [2.44]. En partikkel ladd med en elementærladning får energien 1 eV når den akselereres gjennom et spenningsfall på [2.45].  
+
+{[2.46] 3A.  Hvor mange joule tilsvarer [2.47]? } 
+
+{[2.48] 3B.  Hva blir energien til et elektron som akselereres til en spenning på [2.49] uttrykt i enheten [2.50]?}
+ 
+En elektronstråle fra en elektronkilde med null potensial blir akselerert til et potensial [2.51] vil kunne avbøyes i et transversalt elektrisk felt [2.52] over en avstand [2.53] som vist i figur [2.54]. Avbøyningsvinkelen [2.55] er gitt av
+[1.4]
+
+[1.5]
+
+Likning [2.56] beskriver de fysiske lover som danner grunnlaget for oscilloskopet, som er et instrument for måling av elektrisk spenning. Spenningen som skal måles legges mellom de transversale avbøyningsplatene og avbøyningen av elektronstrålen observert på en fosforescerende skjerm er et mål for spenningen. 
+
+[2.57]
+
+Anta elektronene blir akselerert av et [2.58] akselerasjonspotensial og de øvrige parametre er som vist i figur [2.59]. 
+
+{[2.60] 4.  Hvor stor avbøyning [2.61] får strålen på skjermen hvis avbøyningsspenningen er [2.62]?}
+
+[2.63]{Ladninger i [2.64]-felt}
+[2.65]
+
+Når et elektron beveger seg i et rom fritt for elektrisk felt men med et magnetisk felt [2.66] virker Lorentzkraften til enhver tid normalt på baneretningen (så sant ikke banen er parallell med magnetfeltet). La oss anta elektronet skytes inn i [2.67]-feltet med hastighet vinkelrett på feltet, Lorentzkraften blir da [2.68] og utgjør sentripetalkraften. Elektronbanen blir en sirkel med radius [2.69] med sentripetalakselerasjon [2.70]. Farten [2.71] kan bestemmes fra den kinetiske energien til elektronet gitt av [2.72]. Ved å sette sammen disse likningene får vi følgende uttrykk for radien
+[1.6]
+
+{[2.73] 5.  Sett opp i et kurvediagram kurveskarer over [2.74] sfa. [2.75] i området [2.76] for [2.77], [2.78] og [2.79]}. Bruk for eksempel Python eller Matlab.
+
+
+[2.80]{Bestemmelse av [2.81] (Thomsoneksperimentet)}
+[2.82]
+ 
+I 1897 oppdaget Thomson
+[2.83]
+ekstremt lette, negativt ladde partikler -- som senere viste seg å være elektroner. Samme år brukte han avbøyning i statiske elektriske og magnetiske felt til å finne forholdet mellom deres ladning og masse. Uttrykket [2.84] kan omskrives til 
+[1.7]
+[2.85]
+Forholdet [2.86] kan altså bestemmes ved å måle radius [2.87] i elektronbanen i et magnetfelt [2.88] vinkelrett på banen for elektroner akselerert over en spenning [2.89]. 
+
+Du skal gjenta Thomsons eksperiment i laboratoriet. Størrelsen på apparaturen begrenser diameteren på største elektronbane til ca. [2.90]. 
+
+{[2.91] 6.  Bruk kurveskaren som du satt opp i oppgaven ovenfor til å anslå gunstig magnetfelt [2.92] for tre ulike akselerasjonsspenninger [2.93], [2.94] og [2.95].}
+ 
+Ved omskrivning av [2.96] får du 
+[1.8]
+[2.97]
+som viser at massen [2.98] til en ladd partikkel med kjent ladning [2.99] som har vært akselerert til et kjent potensial [2.100] kan bestemmes ved å måle magnetisk flukstetthet [2.101] og baneradius [2.102] for partikkelen i et magnetisk felt. Dette er ideen bak det magnetostatiske massespektrometeret som er et av de viktigste instrumentene for bestemmelse av atomære og molekylære partikkelmasser. Thomson la med sitt arbeid grunnlaget for denne teknikken.
+
+[2.103]{Spenningsdeler [2.104]}
+[2.105]
+ 
+Den såkalte spenningsdeleren er blant de mest alminnelige elektriske oppkoplinger. Du skal anvende den i eksperimentet. I sin enkleste form ser spenningsdeleren ut som i figur [2.106]A.
+
+[1.9]
+[2.107]
+
+[2.108]
+Gjennom koplingen kan spenningen [2.109] reduseres til [2.110]. For å finne størrelsen på [2.111] sfa. [2.112] kan du se på strømmen [2.113] gjennom motstandene [2.114] og [2.115] som ifølge Ohms lov er lik
+[1.10]
+Bruk Ohms lov igjen på [2.116]:
+[1.11]
+Spenningsdeleren kan gjøres variabel ved å erstatte [2.117] og [2.118] med en motstand med variabel midttapping (skyvemotstand) som vist på figur [2.119]B. Sammen med en fast spenningskilde gir dette en mulighet til å lage en billig variabel spenningskilde. 
+
+Spenningsdeleren har imidlertid en ulempe. 
+
+{[2.120] 7. Kan du finne hvilken ulempe? }
+[2.121][2.122]
+TIPS: Hva  skjer med [2.123] når du begynner å trekke strøm fra utgangen (midttappingen)? Se figur [2.124]C. Resultantmotstanden over parallellkoplingen av [2.125] og [2.126] betegnes [2.127] og er lik [2.128].
+
+
+[2.129]
+
+[2.130]
+[2.131]{Eksperimentelt [2.132] }
+[2.133]
+
+[2.134]
+[2.135]{Apparatur}
+[2.136]
+
+[2.137] 
+[2.138]
+    [2.139] [2.140] Leybold Hereaus 555 571.
+    [2.141] [2.142] Leybold Didactics 521 651	Tube power supply 0...500 V.
+    
+    [2.143] [2.144] Mascot, type 719.  Brukes som strømkilde. 
+    Område: 0-[2.145], [2.146]-[2.147].
+    [2.148] [2.149] Escort EDM168A, 3 sifre, eller tilsvarende.
+    [2.150]
+    [2.151] [2.152] Escort EDM168A, 3 sifre, eller tilsvarende.
+    [2.153]
+   
+    [2.154] [2.155]
+    [2.156] En mengde [2.157] av ulik lengde.
+[2.158]
+
+[1.12]
+Apparaturen er vist skjematisk i figurene [2.159] og  [2.160]. Elektronkanonen ([2.161]) sender ut elektroner som kan avbøyes i et statisk elektrisk felt mellom de parallelle avbøyningsplatene ([2.162]) og/eller i et statisk magnetfelt fra Helmholtzspolene. Glasskolben rundt elektronkanonen er fylt med tynn hydrogengass til et trykk på omtrent [2.163] atmosfærer [2.164]. Støt mellom elektronene og gassen vil eksitere elektronene i gassmolekylene som så deeksiterer og sender ut lys (samme fenomen som ved nordlys). Sporet etter elektronene blir da synlig som en blågrønn stripe. 
+
+{[2.165] Studer elektronkanonen gjennom glasskolben. Studer også den demonterte kanonen fra et gammelt rør som er utlagt i laboratoriet.}
+[2.166]
+[2.167]{Oppkopling av spenninger til elektronkanonen}
+[2.168]
+
+Figurene [2.169] og [2.170] viser skjematisk de elektriske oppkoplinger for elektronkanonen. Notera den gemensamma jordningpunkten (utgång 2 på Leybold Power supply)
+
+[1.13]
+
+[1.14]
+
+Det finnes flere alternative måter å kople opp elektronkanonen, men det er viktigt att koble rett. Det er imidlertid ikke vanskelig å ødelegge et par sikringer om du kopler feil, så spør veileder dersom du er i tvil.
+
+{[2.171] Kople opp glødekretsen i henhold til figur [2.172].}
+
+Merknader og tips:
+[2.173] 
+[2.174]
+    [2.175] Du skall koble till uttak 4 på aggregatet. Vilken du bruker er utan betydelse men en jordas via kontakterna b och c[2.176] i figur [2.177].
+    [2.178] Aggregatet skal være avslått under oppkopling. 
+    [2.179] Be labveilederen om å godkjenne oppkoplingen.
+    [2.180] Slå på aggregatet og juster glødspenningen til "6"(V) og observer at tråden gløder. Dette forutsetter at takbelysningen er slått av og bordbelysningen dempet. Observer at glødspenningen kan senkes til 5 V under eksperimentene.
+    [2.181] Slå aggregatet av igjen.
+[2.182]
+
+[2.183]
+[2.184]
+[2.185]
+[2.186]
+[2.187]
+[2.188]
+[2.189]
+[2.190]
+[2.191]
+
+[2.192]
+[2.193]
+[2.194]
+[2.195]
+[2.196]
+[2.197]
+[2.198]
+[2.199]
+[2.200]
+
+For å trekke ut en elektronstråle fra katoden må elektronene akselereres som forklart ovenfor i teoridelen. Dette gjøres ved å legge en akselerasjonsspenning mellom katoden og anoden. 
+
+{[2.201] Kople til akselerasjonsspenningen i henhold til figur [2.202]}.[2.203]
+
+Merknader og tips:
+[2.204] 
+[2.205]
+    [2.206] Pass på at kraftforsyningen er slått av, og at justeringsknappene for strøm og spenning er skrudd helt ned når du kopler sammen.
+    [2.207] Koble Leybold utgang 3 til "a" och utgang 2 till "b".
+    [2.208] Foreløpig avbøyningspotensial [2.209], derfor koples de to avbøyningsplatene (e[2.210] och e[2.211]) sammen och eventuellt jordas eller kopplas till anoden, for å forhindre att laddning byggs opp på dem. 
+    [2.212] For å unngå målefeil pga. spenningsfall over seriemotstanden kan du kople voltmeteret direkte til anoden i steden for "f". Bruk måleområde 1000 V likespenning. Kontroller verdien på Leybold aggregatet. Hur stort målefeil får du og vad bestemmer størrelsen på feilen?
+    [2.213] Seriemotstandene montert internt i apparaturen er satt inn av sikkerhetsmessige grunner for å unngå for stor strøm i kretsen i tilfelle intern kortslutning (f.eks.[2.214] en gassutladning). 
+[2.215]
+ 
+
+
+
+
+
+
+
+
+[2.216]
+[2.217]
+[2.218]
+[2.219]
+[2.220]
+[2.221]
+[2.222]
+
+
+
+
+{[2.223] Nå er det klart til å skru på alle spenninger og se at elektronstrålen vises:}
+[2.224] 
+[2.225]
+[2.226] Be labveilederen om å godkjenne oppkoplingen.
+[2.227] Slå spenningen for glødingen på.
+[2.228] Sjekk at filamentet starter å gløde.
+[2.229]
+[2.230] Øk akselerasjonsspenningen sakte inntil du (ved 20--30 V eller noe høyere hvis øynene ikke har vent seg til mørket) ser 
+sporet etter elektronstrålen i hydrogengassen som en blåfiolett stripe ut av elektronkanonen.
+[2.231] Observer hvordan strålen forandrer seg når du forandrer akselerasjonsspenningen.
+[2.232] Hvorfor når ikke strålen glassveggen ved lav akselerasjon? Ved høyere spenninger vil, ganske brått, strålen møte veggen, senk da spenningen noe. Dette skjer ved ulike spenninger ved de ulike oppsett, følg godt med rundt 100 V, og evt. oppover til ca. 150 V.
+[2.233] MERK: Hvis anoden begynner å gløde må du slå apparaturen av og la den avkjøle seg. Bruk aldri høyere akselerasjonsspenning enn nødvendig for å unngå gløding. 
+[2.234]
+[2.235]
+
+
+Prosedyre for å [2.236]:
+[2.237] 
+[2.238]
+[2.239] Slå glødespenningen av.
+[2.240] Reduser akselerasjonsspenningen til null og slå kraftforsyningen av. 
+[2.241]
+[2.242]
+MERK: Det er ikke farlig å ha på akselerasjonsspenning og magnetfelt uten å ha på glødespenning, men det er ikke bra å ha på glødespenning uten akselerasjonsspenning. Slå derfor alltid av glødespenningen når du har korte og lengre pauser.
+
+I en elektronstråle har alle partiklene samme fortegn på ladningen. Strålen vil derfor ha en tendens til å divergere pga. intern Coulombkraft. Hvis fokuseringsringen (Wehneltsylinderen) foran katoden legges svakt negativt, vil dette virke fokuserende på strålen. 
+
+{[2.243] Kople til Wehneltsylinderen i henhold til figur [2.244].}
+Utgång 1 till "W".
+Merknader og tips:
+[2.245] 
+[2.246]
+    [2.247] Sjekk at kraftforsyningen er slått av og at justeringsknappene for strøm og spenning er skrudd helt ned før du kobler den til.
+    [2.248] Etter du har koblet til Wehneltsylinderen og slått på kraftforsyningen. Juster spenningen på fokuseringselektroden (Wehneltsylinderen) hvis du synes at strålen er dårlig fokusert. Bruk maksimalt [2.249].
+[2.250]
+[2.251]
+
+[2.252]{Avbøyning i [2.253]-felt}
+[2.254]
+
+Oppgave:[2.255][2.256]
+
+I oppstillingen til nå har du lagt begge avbøyningsplatene på samme spenning, nemlig anodespenningen [2.257]. For å få avbøyning legges den ene plata på noe lavere spenning. I praksis gjør vi dette ved å ta spenningsdeling fra anodespenningen. Prinsippet for spenningsdeling er vist i figur [2.258]. Her må du gjøre forandringer i oppkoplingen. Anodespenningen (3) skal nå kobles med koblingsboks enligt skjemaet i figur [2.259] viser forandringer du må gjøre fra oppkopling i figur [2.260] der avbøyningspotensialet var null. Koblingen mellan e[2.261] och e[2.262] tas bort. 
+
+
+Spenningsdeleren består av et presisjonspotensiometer (Helipot) og er montert på koplingsboks B. Akselerasjonsspenningen [2.263] koples over potensiometeret. Fra midttappingen tar vi ut en spenning som varierer med stillingen til potensiometerknappen, som trenger 10 omdreininger for å skrus fra topp til bunn. Avbøyningsspenningen tas ut mellom topputtaket (som altså er på potensial [2.264] ) og midtuttaket på potensial [2.265], der [2.266] kan variere fra 0 til [2.267]. Det betyr at den ene avbøyningsplata ligger på anodespenningen [2.268] og den andre på [2.269]. Avbøyningsspenningen blir da 
+[1.15]
+Hvis du kopler feil og tar ut spenningsdeling til jordpotensialet vil elektronstrålen bremses kraftig og lett forsvinne. Hvilken plate som skal ha lavere potensial finner du ut ved å tenke, eller ved å prøve og feile.
+
+{[2.270] Kople til avbøyningspotensialet ifølge figur [2.271].}
+ 
+[1.16]
+
+Merknader og tips:
+[2.272] 
+[2.273]
+    [2.274] Innstill potensiometeret på [2.275] slik at midttappingen har samme potensial som anodespenningen.
+    [2.276] Slå på glødingen, fokuseringsspenning og akselerasjon som beskrevet tidligere.
+    [2.277] Varier avbøyningen ved å skru på potensiometerknappen.
+[2.278]. 
+
+Skisser strålen for forskjellige avbøyningsspenninger, f.eks. [2.279] lik [2.280] og [2.281].
+}
+
+ 
+[2.282]{Avbøyning i [2.283]-felt}
+[2.284]
+
+Oppgave:[2.285][2.286].  Merk at oppkoplingen av spenningsdeleren i forrige steg ikke er nødvendig for forsøkene som skal utføres her}
+
+{[2.287] Kople strømkretsen til magnetene med Mascot aggregatet i (g)
+.}
+
+[2.288]
+[2.289]
+[2.290]
+[2.291]
+[2.292]
+[2.293]
+[2.294]
+[2.295]
+[2.296]
+[2.297]
+[2.298]
+
+Merknader og tips:
+[2.299] 
+[2.300]
+    [2.301] Sjekk at kraftforsyningen for Helmholtzspolene er avslått og at kontroll[2.302]-knappene for strøm og spenning er skrudd helt ned.
+    [2.303] Innstill kraftforsyningen til strømkilde (METER: A og reguleringsknappen for spenning opp 1/2 omdreining) og sett RANGE til [2.304].
+    [2.305] Bruk multimeteret (6) for strømmåling
+    [2.306] Skru opp strømmen til ca. [2.307], og sjekk at strømkretsen virker. MERK: Spolene tåler maks. [2.308]. Skru deretter strømmen ned igjen.
+    [2.309] Slå på elektronstrålen som beskrevet tidligere.
+    [2.310] Juster akselerasjonsspenningen til ca: [2.311] og magnetstrømmen til [2.312].
+[2.313]
+
+Be labveilederen om å hjelpe deg å vri elektronstrålerøret i opplagringen inntil strålen beskriver en heliksformet bane.
+
+{[2.314] Skisser strålen og forklar grunnen til den heliksformede banen.}
+
+[2.315]{Thomsoneksperimentet: måling av [2.316]}
+[2.317]
+
+Oppgave:[2.318][2.319] ved å måle akselerasjonsspenningen [2.320], radien [2.321] i elektronbanen og magnetfeltet [2.322].}
+
+Magnetfeltet er forhåndskalibrert mot strømmen i spolene. Resultatet er gitt i en kalibreringskurve vedlagt apparaturen og som et empirisk uttrykk for magnetfeltet som funksjon av målt spolestrøm funnet fra kalibreringskurven. Alternativt kan dette uttryck brukas:
+[1.17]
+R: Spolenes radie, n: antal varv = 130 per spole.
+
+Merknader og tips:
+[2.323] 
+[2.324]
+    [2.325] Rett opp røret slik at strålen blir en sirkel og ikke en heliks.
+    [2.326] Innstill multimeteret for spenningsmåling i området 0-[2.327] likespenning.
+    [2.328] Be labveilederen om å vise deg hvordan du måler elektronbanens diameter ved hjelp parallakse-speilet bak elektronstrålerøret og en linjal.
+    [2.329] Det er mulig å fotografere elektronbanen og analysere i TRACKER for å få banens diameter. Observer at man må ha en skala (linjal) i bilden då.
+[2.330]
+
+[2.331]{Analyse og diskusjon av Thomsoneksperimentet}
+[2.332]
+
+[2.333] 
+[2.334]
+    [2.335] Bestem [2.336] for elektronet ut i fra dine målinger av [2.337], [2.338], [2.339] og kalibreringskurven eller formeln for [2.340].
+    [2.341] Gjenta dersom du har tid bestemmelsen for et annet sett av verdier for [2.342] og [2.343].
+    [2.344] Anslå feilene i de målte størrelser og finn målfeilen i [2.345]. 
+    [2.346]
+    Hvilke feilkilder dominerer? 
+    [2.347] Sammenlign den målte verdi av [2.348] med tabellverdi.
+    [2.349] Hvordan er overenstemmelsen mellom måleresultatene fra ulike verdier av [2.350] og [2.351] og feilestimatet ditt?
+    [2.352] Diskuter mulige anvendelser av de fysiske effekter som er tatt opp til observasjon i eksperimentet.
+[2.353]
+
+[2.354]
+[2.355]{Avslutning}
+[2.356]
+Slå av alle apparater, trekk ut og rydd opp i alle ledninger. Forlat plassen i minst like god orden som du fant den.
+
+
+[1.18]

@@ -1,0 +1,144 @@
+[1.0]
+
+[2.0]{SIKKERHET I LABORATORIET [2.1] }
+
+
+[2.2]
+
+
+Eksperimentene i dette laboratoriekurset er sikre og medfører ingen fare dersom fornuftige og opplagte forholdsregler følges og studentene følger sikkerhetsinstruksjonene som gis nedenfor. Det eksisterer alltid en potensiell fare for elektrisk støt eller brann overalt hvor det finnes vegguttak, stikkontakter, kabling eller tilkoblinger, som finnes i alle laboratorier og hjem. Formålet med dette kapitlet  er å gi deg generell informasjon som skal forberede deg til å utføre laboratorieforsøk uten å sette deg selv eller andre i unødvendig fare, og å beskrive prosedyren som skal følges dersom du eller noen andre i nærheten befinner seg i en nødsituasjon.
+
+[2.3]
+[2.4]{Det elektriske utstyret}
+[2.5]
+
+
+
+Som det fremgår av Ohms lov, [2.6], og loven om effektutvikling i en motstand, [2.7], vil det alltid være et spenningsfall [2.8] over en strømførende leder med strøm [2.9] og motstand [2.10], og det vil også alltid utvikles varme i lederen (forutsatt at [2.11]).
+ 
+
+For å sikre forbrukeren mot strømstøt, koples ytterkappen til alt utstyr som har ledende ytterkappe permanent til jord. Dette gjøres gjennom  jordingskontakten i støpselen. Dersom det oppstår feil som medfører at tilførselsspenningen til utstyret kommer i kontakt med den ledende ytterkappen, vil sikkerhetsjordingen sørge for at spenningen koples til jord og ikke legges på ytterkappen, med de farer dette innebærer. Strømmen vil altså kortsluttes til jord og normalt vil sikringen gå og strømmen brytes.[2.12]{Det er i den forbindelse viktig at sikkerhetsjordledningen er dimensjonert slik at den tåler strømmen i hovedtilførselsledningen, dvs.[2.13] den må minst ha samme tverrsnitt som hovedtilførselsledningen.}
+
+For å unngå at personsikkerheten skal være avhengig av strømsikringene, utstyres elektriske energinett ofte med en såkalt [2.14]. Nullstrømbryteren kan oppdage jordlekkasjestrømmer som er mye mindre en kursens sikringsverdi. Dette gjør bryteren ved å sammenligne strømmen i de to ledningene til en kurs, dvs.[2.15] strømmen inn til en forbruker med strømmen i retur fra forbrukeren. Tap av strøm hos forbrukeren tolkes som lekkasjestrøm til jord. Hvis nullstrømbryteren oppdager en forskjell mellom fase[2.16]-strømmene som er større enn en bestemt forhåndsinnstilt verdi (f.eks. [2.17]), så brytes strømmen. 
+
+En tredje metode for å sikre forbrukeren mot strømstøt er [2.18] av utstyr (utstyr i klasse II, merket med en dobbeltfirkant:
+[2.19](12,12)
+    [2.20](0,0){[2.21](1,0){10} }
+    [2.22](10,0){[2.23](0,1){10} }
+    [2.24](10,10){[2.25](-1,0){10} }
+    [2.26](0,10){[2.27](0,-1){10} }
+    [2.28](2,2){[2.29](1,0){6} }
+    [2.30](8,2){[2.31](0,1){6} }
+    [2.32](8,8){[2.33](-1,0){6} }
+    [2.34](2,8){[2.35](0,-1){6} }
+[2.36]
+[2.37]!). Dobbeltisolert utstyr må ikke forsøkes jordes da det vil redusere berøringssikkerheten.
+
+Erfaring har vist at de aller fleste av feilene i elektriske anlegg er jordingsfeil. Vettug omgang med jord og korrekt jording av elektrisk utstyr er en forutsetning for trygg bruk av elektrisk energi og for at elektrisk utstyr virker korrekt. Plugg aldri elektrisk utstyr som krever jordet støpsel i en ikke-jordet stikkontakt.
+
+
+
+[2.38]
+[2.39]{Oppkopling av elektriske kretser}
+[2.40]
+
+Ifølge Elektrisitetstilsynets forskrifter må alle vekselspenninger over [2.41] effektivverdi og alle rippelfrie likespenninger over [2.42] være forskriftsmessig isolert. Når du kopler opp kretser i laboratoriet, må du påse at disse forskrifter blir fulgt. 
+
+Du må også passe på at ledningtverrsnittet til de ledninger du bruker er tilstrekkelig stort for at ledningene ikke blir opphetet. Selv om motstanden i elektriske ledninger er liten, vil ikke verdien alltid være neglisjerbar. For tvinnede kobberledninger som brukes til faste installasjoner i hus (med 230~V) sier forskriftene at en ledning med tverrsnitt [2.43] maksimalt kan føre en strøm på [2.44]. Som en tommelfingerregel i laboratoriet kan vi anta at [2.45] ved spenninger under [2.46] vil være trygt. De fleksible lissene vi bruker for oppkoplinger har alle tverrsnitt som er større enn [2.47]. Strømmer opp til [2.48] vil derfor ikke by på noe problem for disse lissene. Et annet forhold du må passe på er å velge stort nok tverrsnitt på ledningene dine slik at spenningsfallet over ledningene ikke gir bidrag til målefeil.
+
+Vær forsiktig med å sende strøm gjennom kveiler/tromler med elektrisk ledning. Grense[2.49]-kravene beskrevet over gjelder ledninger i friluft med naturlig luftavkjøling. Dersom ledningen kveiles tett sammen, vil varmeutviklingen føre til betydelig større temperaturøkning som kan føre til at isolasjonen kan smelte.
+
+Når du bruker elektrisk koplingsmateriell er det viktig at du forsikrer deg om at alt materiell er i orden. Se etter skader på ledninger og spesielt kontakter. Det er også viktig at du behandler koplingsmateriellet slik at det ikke oppstår skader på det. Pass på å plassere ledningene under bruk slik at det ikke er fare for at de blir hektet fast i bevegelige deler eller kommer i klemme slik at isolasjonen skades. Ledningene bør også ligge fritt slik at de får tilstrekkelig avkjøling. Når ledningsmateriellet ikke er i bruk skal det ikke tvinnes opp da kraftig opptvinning kan skade isolasjonen og tilkoplingen mellom leder og kontakt. 
+
+
+[2.50]
+[2.51]{Innflytelse av elektriske strømmer på kroppen}
+[2.52]
+
+Faren ved elektriske støt er forbundet med størrelsen på den strømmen som går gjennom kroppen og hvilken strømbane den følger. Hvor stor spenning kroppen tåler vil avhenge av den totale motstanden i strømkretsen hvor kroppen inngår. Figur [2.53] viser menneskekroppen som en del av en strømkrets.
+
+
+[1.1]
+
+Strømgjennomgang kan skade kroppen, enten ved at den skader kroppsvevet ved oppvarming, eller ved at strømmen forstyrrer de elektriske signalene i nervesystemet. Oppvarmingen er gitt av strømmen [2.54] og motstanden [2.55] i vevet som varmes opp. En vedvarende strøm gjennom vevet over tid vil tilføre en stadig større varmeenergi og risiko for skade. Forstyrrelse av de elektriske signalene i nervesystemet kan bl.a.[2.56] føre til hjerteflimmer og lammelser. Spesielt er vekselstrøm i frekvensområdet [2.57] til [2.58] farlig for nervesystemet. Vår nettforsyning på [2.59] er derfor i den farlige kategorien. Når frekvensen på vekselstrømmen øker, vil innflytelsen på nervesystemet avta, og for frekvenser over [2.60] er innflytelsen tilnærmet borte. Oppvarmingseffekten er imidlertid fremdeles til stede. 
+
+Strømbaner gjennom hjerte- og lungeregionen er spesielt farlige pga.[2.61] de vitale organene som der finnes. Nyrene er også spesielt følsomme for strømskader. 
+
+Fra strømkretsen i figur [2.62] ser vi at strømmen gjennom kroppen er gitt ved 
+
+[1.2]
+
+Når det blir referert til spenningen på et forsyningsnett menes vanligvis effektivverdien av spenningen, definert som
+
+[1.3]
+
+Det betyr at for et [2.63] volts anlegg er toppspenningen (amplituden) [2.64].
+
+Sikkerhetstiltak mot strøm går ut på å redusere verdien på strømmen gjennom kroppen til ufarlige verdier. Dette kan for en gitt spenning [2.65] gjøres ved å sørge for at summen av motstandene under brøkstreken er tilstrekkelig stor:
+
+[2.66]
+    [2.67][[2.68]] Vanlig elektrisk isolasjon av elektrisk utstyr går ut på å gjøre [2.69] tilstrekkelig stor. 
+    
+[2.70]
+    
+    [2.71][[2.72]] Kroppens indre motstand [2.73] er konstant og av størrelsesorden [2.74]. Legg merke til at grensen for påbudt isolasjon av vekselspenning på [2.75] effektiv spenning tilsvarer [2.76] når vi antar at motstanden i strømkretsen kun består av kroppens indre motstand, dvs.[2.77] verste tilfelle.
+    [2.78][[2.79]] Overgangsmotstanden [2.80] i huden kan variere fra [2.81] ved fuktig hud til langt over [2.82] ved tørr hud. [2.83] avtar også med økende spenning og den varierer også med frekvensen slik at den er lavest i frekvensområdet rundt [2.84]. Dette medvirker til å gjøre vekselspenning farligere enn likespenning. Et annet forhold som gjør vekselspenning farligere enn likespenning er at størrelsen på spenningen det refereres til når vekselspenning omtales er effektivspenningen. Toppspenningen er imidlertid [2.85] høyere, som beskrevet i likning [2.86].
+    [2.87][[2.88]] Dersom kroppen ikke er i kontakt med jord, vil [2.89] være stor.  Hvorfor dør ikke fuglene når de sitter på kraftledninger (se figur [2.90])? Svar på dette spørsmålet ved å modifisere figur [2.91]. Se nå på figur [2.92], og svar så på spørsmålet stilt der.
+    [2.93]
+[2.94]
+
+[1.4]
+
+I tillegg til ovenstående er det viktig å være klar over at høyfrekvent elektromagnetisk stråling i [2.95]--[2.96]-området (mikrobølger--radar) kan være farlig for kroppen ved at det elektriske vekselfeltet fører til oppvarming av kroppsvevet, samme effekt som gir oppvarming i en mikrobølgeovn. Slik høyfrekvent oppvarming er ekstra farlig fordi den ofte foregår uten at normale smertefunksjoner trer i kraft. Personer bør skjermes hvis effekt per flateenhet mot kroppen er [2.97]. 
+
+[1.5]
+[2.98]
+[1.6] 
+
+
+[2.99]
+[2.100]{Virkning av statisk magnetfelt}
+[2.101]
+Den internasjonale kommisjon for beskyttelse mot ikke-ioniserende stråling (ICNIRP) gir i sine retningslinjer anbefalte grenseverdier for eksponering for elektromagnetiske felt (se tabell [2.102]). I Norge er det i strålevernforskriften gitt bestemmelser om at ICNIRPs retningslinjer skal følges, og at all eksponering skal holdes så lavt som praktisk mulig. For statisk magnetfelt er anbefalt grense [2.103] for arbeidstakere og [2.104] for generell befolkning. Personer med pacemaker, ferromagnetiske implantater eller implanterte elektroniske komponenter bør ikke utsettes for magnetfelt over [2.105].[2.106]{[2.107] [[2.108] [2.109] (2009) 504--519.]} I eksperimentet der Helmholtzspolene brukes vil den magnetiske flukstettheten [2.110] i umiddelbar nærhet av spolene ha en verdi som så vidt overstiger [2.111] for [2.112] og [2.113], hvor [2.114] er strømmen som flyter i spolene og [2.115] er den gjennomsnittlige radien til spolene. Men feltet avtar raskt utenfor spolene; størrelsen av [2.116] i et punkt vinkelrett på spolen i avstand [2.117] (eller større) fra spolens sentrum er mindre enn [2.118]. Dersom en strømstyrke på [2.119] brukes, vil feltet overalt være lavere enn anbefalt grense for personer med implantater. En student med et implantat som er følsomt for magnetfelt bør informere ansvarspersonen, som vil sørge for at denne studenten har en partner som ikke har implantat og at partneren gjør målingene.
+
+
+[2.120]
+[2.121]{Sunn fornuft i omgang med elektrisk utstyr}
+[2.122]
+
+I tillegg til de vanlige risikoene i forbindelse med elektrisitet, har noen laboratorier høyspenningsutstyr[2.123]{For vår hensikt vil det være nok å betrakte enhver spenning høyere enn [2.124] som høyspenning.} som utgjør en enda større potensiell fare. Studenter bør være ekstra forsiktige med slikt utstyr, og bør lære seg hvordan de kan frakoble strømkilden i en nødssituasjon. Her er noen regler som må følges når man arbeider med og i nærheten av elektrisitet. 
+
+[2.125]
+    [2.126] Ikke arbeid med elektrisitet dersom dine hender, føtter, eller andre deler av kroppen er våte, eller hvis du står på et vått gulv.
+    [2.127] Inspiser elektrisk utstyr (med strømmen avslått og stikkontakten trukket ut) for ødelagte ledninger og skadede tilkoblinger. Hvis noe slikt oppdages, ikke bruk utstyret. Meld så i fra til ansvarshavende slik at utstyret kan repareres.
+    [2.128] Forsøk aldri å reparere elektrisk utstyr selv---dette må gjøres av kvalifisert personell. 
+    [2.129] Dersom du blir utsatt for selv et mildt støt fra noe utstyr, lever det umiddelbart inn til reparasjon.
+    [2.130] Ikke bruk eller lagre ekstremt brannfarlige væsker i nærheten av elektrisk utstyr. Noen stoffer, slik som eter, kan antennes av gnist fra elektrisk utstyr. 
+    [2.131] Bruk alltid jordede stikkontakter i jordede vegguttak. Forsøk aldri å sette en jordet stikkontakt inn i et ujordet vegguttak.
+    [2.132] Skjøteledninger bør ikke brukes i stedet for permanent kabling; de bør kun brukes midlertidig og de bør ikke trekkes under dører, på tvers av ganger, gjennom vinduer eller hull i vegger, rundt rør eller i nærheten av vasker.
+    [2.133] Ikke overbelast kretser ved å bruke grenuttak på ett vanlig uttak.
+    [2.134] Ikke fjern eller endre på sikkerhetstiltak på høyspenningsutstyr. Husk at de er der for å beskytte deg.
+    [2.135] Vær sikker på at strømmen er slått av under tilkobling eller når endringer på kretsen foretas.
+    [2.136] Vær sikker på at alt utstyr er satt med riktige innstillinger iht. målingen som skal utføres før kretsen gjøres strømførende.
+    [2.137] Vær sikker på at komponentene som brukes er av en gradering som kan motstå pålagt strøm og spenning.
+    [2.138] Erstatt ødelagte sikringer med nye av riktig type og med korrekte spesifikasjoner.
+    [2.139]:
+    [2.140] 
+        [2.141] ikke fjern den skadede fra den elektriske kilden før strømmen har blitt slått av.
+        [2.142] hvis du ikke får slått av strømmen, bruk noe isolerende slik som et tørt tau, klut eller kosthåndtak for å dra personen bort fra strømmen.
+        [2.143] sjekk om det er kontakt.
+        [2.144] sjekk om det er pust.
+        [2.145] sikre frie luftveier.
+        [2.146] når skadde ikke puster eller ved hjertestans, ring 113 AMK-sentralen.
+        [2.147] gi hjerte-/lungeredning (HLR) 30 kompresjoner og 2 innblåsninger. Fortsett til helsepersonell kommer.
+        [2.148] puster den skadde selv, legges personen i stabilt sideleie.
+        [2.149] let etter brannskader og kjøl ned brannsår med vann og behandle dem som tredjegradsforbrenning.
+        [2.150] alle skadde skal ha tilsyn etter at førstehjelp er gitt. Ikke forlat bevisstløse personer. Bevisste personer skal snakkes med. Personskader skal behandles videre av medisinsk personell.
+        [2.151] personer som sendes til Legevakten i drosje/privatbil skal følges helt fram og inn. Ta med evt. HMS-datablad!
+        [2.152] alle ulykker/tilløp til ulykker er å betrakte som avvik i forhold til normal drift, og skal meldes på avviksskjema.
+    [2.153]
+[2.154]
+
+I forsøket med Coulombs lov, gir høyspenningskanonen som brukes for å lade opp kulene [2.155] når den aktiveres. Strømmen er imidlertid begrenset til [2.156]. Slike strømmer har vanligvis ingen fysiologisk virkning på kroppen, men likevel: [2.157].
+
+[1.7]
