@@ -45,13 +45,13 @@ Experience has shown that the vast majority of faults in electrical systems are 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 According to the Norwegian Electricity Regulatory Authority's regulations, all AC voltages above \SI{25}{\V} rms value and all ripple-free DC voltages above \SI{60}{\V} must be properly insulated. When connecting circuits in the laboratory, make sure that these regulations are followed.
-\sidenote{Is this still the law?}
+% \sidenote{Is this still the law?}
 
 You must make sure that the wires you use are sufficiently large, so that they do not heat up.
 Although the resistance in electrical wires is small, the value will not always be negligible. For twisted copper cables used for fixed installations in houses (with 230~V), the regulations state that a cable with a cross-section of \SI{2,5}{\mm\squared} can carry a maximum current of \SI{16}{\ampere}. As a rule of thumb in the laboratory, we can assume that \SI{5}{\ampere/\square\mm} at voltages below \SI{300}{\V} will be safe. The flexible laces we use for connections all have cross-sections that are larger than \SI{1}{\square\mm}.
 Currents up to \SI{5}{\ampere} will therefore not present any problem for these laces. Another factor you need to take care of is choosing a large enough cross-section on your wires so that the voltage drop across the wires does not contribute to measurement errors.
 
-Be careful not to send current through coils / drums with electrical wiring. The requirements described above apply to wires in the open with natural air cooling. If the wire is coiled tightly together, the heat development will lead to a significantly greater temperature increase which can lead to the insulation melting.
+Be careful not to send current through coils of electrical wire. The requirements described above apply to wires in the open with natural air cooling. If the wire is coiled tightly together, the heat development will lead to a significantly greater temperature increase which can lead to the insulation melting.
 
 When using electrical connection equipment, it is important that you make sure that all equipment is in order. Look for damage to wires and especially connectors. It is also important that you treat the coupling material so that it is not damaged. Be sure to place the wires during use so that there is no danger of them getting caught in moving parts or getting pinched so that the insulation is damaged. The cables should also be left free so that they have sufficient cooling. When the wiring material is not in use, it should not be twisted up as heavy twisting can damage the insulation and the connection between the conductor and the socket.
 
@@ -102,70 +102,93 @@ Safety precautions against electrical damage involve reducing the value of the c
     
     \item [$R_\text{k}$] The internal resistance of the body $R_\text{k}$ is constant and of the order of \SI{500}{\ohm}. Note that the limit for mandatory isolation of AC voltage of \SI{25}{\V} effective voltage corresponds to \SI{50}{\milli\ampere} when we assume that the resistance in the circuit consists only of the body's internal resistance, ie \ worst case.
     \item [$R_\text{h}$] The transition resistance $R_\text{h}$ in the skin can vary from \SI{0}{\ohm} for moist skin to well above \SI{10000}{\ohm} for dry skin. $R_\text{h}$ also decreases with increasing voltage and it also varies with the frequency so that it is lowest in the frequency range around \SI{50}{\hertz}. This helps to make AC voltage more dangerous than DC voltage. Another factor that makes alternating voltage more dangerous than direct voltage is that the magnitude of the voltage referred to when alternating voltage is mentioned is the effective voltage. However, the peak voltage is $\sqrt{2} \times $ higher, as described in equation \eqref{eq:EffectiveV}.
-    \item [$R_\text{j}$] If the body is not in contact with the ground, $R_\text{j}$ will be large. Why do the birds not die when they are on power lines (see figure \ref{fig:BirdA})? Answer this question by modifying Figure \ref{fig:Kroppen}. Now look at figure \ref{fig:BirdB}, and then answer the question asked there.
+    \item [$R_\text{j}$] If the body is not in contact with the ground, $R_\text{j}$ will be large. Why do the birds not die when they are on power lines (see Figure \ref{fig:BirdA})? Answer this question by modifying Figure \ref{fig:Kroppen}. Now look at Figure \ref{fig:BirdB}, and then answer the question asked there.
     %Fugler som setter seg på høyspenningslinjer tar ikke skade p.g.a.\ at $R_{\rm j}$ er stor. Hvis handa di er i kontakt med en vannkran eller jordet ledning er $R_{\rm j} \approx 0 \; \Omega$.
 \end{description}
 
-\begin{marginfigure}%[!ht]
-\RawFloats
-    \begin{minipage}[b]{\linewidth}
-        \centering
-        \includegraphics[scale=0.82]{fig/BirdL.eps}
-        \caption{%
-            En fugl som sitter på en kraftlinje.
-        }
-        \label{fig:BirdA}
-    \end{minipage}
-    \hspace{0.1cm}
-    \begin{minipage}[b]{\linewidth}
-        \centering
-        \includegraphics[scale=0.35]{fig/BirdC.eps}
-        \caption{%
-            Hva skjer når den slås på?
-        }
-        \label{fig:BirdB}
-    \end{minipage}
+\begin{marginfigure}[-5cm]%[!ht]
+  \centering
+  \includegraphics[scale=0.82]{fig/BirdL.eps}
+  \caption{%
+    A bird sitting on a power line.
+  }
+  \label{fig:BirdA}
+\end{marginfigure}
+
+\begin{marginfigure}
+  \centering
+  \includegraphics[scale=0.35]{fig/BirdC.eps}
+  \caption{%
+    What happens when turning on the circuit?
+  }
+  \label{fig:BirdB}
 \end{marginfigure}
 
 In addition to the above, it is important to be aware that high-frequency electromagnetic radiation in the \si{\mega\hertz} - \si{\giga\hertz} range (microwaves - radar) can be dangerous for the body in that the electric alternating field leads to heating of the body tissue, the same effect which provides heating in a microwave. Such high-frequency heating is extra dangerous because it often takes place without normal pain functions taking effect. People should be shielded if the power per unit area against the body is $> \SI{0,01}{\watt/\cm\squared}$.
 
-\begin{table}[!ht]
-    \begin{center}
-    \caption{Limits of exposure\textsuperscript{a} to static magnetic fields}
-    \label{tab:exposurlimits}
-        \begin{tabular}{ l  c  c }
-        \hline
-        \noalign{\bigskip}
-        \qquad\qquad Exposure characteristics &  & Magnetic flux density  \\
-        \noalign{\medskip}
-        \hline
-        \noalign{\medskip}
-        Occupational\textsuperscript{b} &  &  \\ 
-        \noalign{\smallskip}
-            \quad Exposure of head and trunk&   &  \SI{2}{\tesla} \\ 
-            \quad Exposure of limbs\textsuperscript{c} & &  \SI{8}{\tesla}\\
-        \noalign{\medskip}
-        General public\textsuperscript{d} &  &  \\ 
-        \quad Exposure of any part of the body& & \SI{400}{\milli\tesla}\\
-        \noalign{\medskip}
-        \hline
-        \noalign{\medskip}
-        \end{tabular}
-    \end{center}
-    \vspace*{-0.7cm}
-\end{table}
-%
-\begin{figure}[!ht]
-    \centering
-    \begin{minipage}[t]{0.7\textwidth}
+% \begin{table}[ht]
+%   \centering
+%   \caption{Limits of exposure\textsuperscript{a} to static magnetic fields}
+%   \label{tab:exposurlimits}
+%   \begin{tabular}{ l  c  c }
+%     \hline
+%     \noalign{\bigskip}
+%     \qquad\qquad Exposure characteristics &  & Magnetic flux density  \\
+%     \noalign{\medskip}
+%     \hline
+%     \noalign{\medskip}
+%     Occupational\textsuperscript{b} &  &  \\ 
+%     \noalign{\smallskip}
+%     \quad Exposure of head and trunk&   &  \SI{2}{\tesla} \\ 
+%     \quad Exposure of limbs\textsuperscript{c} & &  \SI{8}{\tesla}\\
+%     \noalign{\medskip}
+%     General public\textsuperscript{d} &  &  \\ 
+%     \quad Exposure of any part of the body& & \SI{400}{\milli\tesla}\\
+%     \noalign{\medskip}
+%     \hline
+%     \noalign{\medskip}
+%   \end{tabular}
+%   \vspace*{-0.7cm}
+% \end{table}
+
+\begin{table*}[h]
+  \centering
+  \begin{tabular}{llc}
+    \hline
+    \noalign{\bigskip}
+    \multicolumn{2}{l}{Exposure characteristics} & Magnetic flux density\\
+    \noalign{\medskip}
+    \hline
+    \multicolumn{2}{l}{Occupational\textsuperscript{b}} & \\
+                                                 & Exposure of head and trunk & \SI{2}{\tesla}\\
+                                                 & Exposure of limbs\textsuperscript{c} & \SI{8}{\tesla}\\
+    %%%% 
+    \multicolumn{2}{l}{General public\textsuperscript{b}} & \\
+                                                 & Exposure to any part of the body & \SI{400}{\milli\tesla}\\
+    \hline
+  \end{tabular}
+  \caption{Limits of exposure\textsuperscript{a} to static magnetic fields.\\
     \footnotesize{
         \textsuperscript{a} ICNIRP recommends that these limits should be viewed operationally as spatial peak exposure limits.\\
         \textsuperscript{b} For specific work applications, exposure up to \SI{8}{\tesla} can be justified, if the environment is controlled and appropriate work practices are implemented to control movement-induced effects.\\
         \textsuperscript{c} Not enough information is available on which to base exposure limits beyond \SI{8}{\tesla}.\\
         \textsuperscript{d} Because of potential indirect adverse effects, ICNIRP recognizes that practical policies need to be implemented to prevent inadvertent harmful exposure of persons with implanted electronic medical devices and implants containing ferromagnetic material, and dangers from flying objects, which can lead to much lower restriction levels such as \SI[output-decimal-marker = {.}]{0.5}{\milli\tesla}.
+      }
     }
-    \end{minipage}
-\end{figure}
+  \label{tab:exposurlimits}
+\end{table*}
+%
+% \begin{figure}[!ht]
+%     \centering
+%     \begin{minipage}[t]{0.7\textwidth}
+%     \footnotesize{
+%         \textsuperscript{a} ICNIRP recommends that these limits should be viewed operationally as spatial peak exposure limits.\\
+%         \textsuperscript{b} For specific work applications, exposure up to \SI{8}{\tesla} can be justified, if the environment is controlled and appropriate work practices are implemented to control movement-induced effects.\\
+%         \textsuperscript{c} Not enough information is available on which to base exposure limits beyond \SI{8}{\tesla}.\\
+%         \textsuperscript{d} Because of potential indirect adverse effects, ICNIRP recognizes that practical policies need to be implemented to prevent inadvertent harmful exposure of persons with implanted electronic medical devices and implants containing ferromagnetic material, and dangers from flying objects, which can lead to much lower restriction levels such as \SI[output-decimal-marker = {.}]{0.5}{\milli\tesla}.
+%     }
+%     \end{minipage}
+% \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -4,7 +4,7 @@
 % Jan. 2022 -- Translation from Norwegian to English by Thorvald M. Ballestad.
 %
 
-\documentclass[12pt, twoside=false]{kaobook}  % [twoside] is default in book.  
+\documentclass[12pt, a4paper, twoside=false]{kaobook}  % [twoside] is default in book.  
 
 \usepackage[framed=true]{kaotheorems}
 
@@ -89,26 +89,12 @@
 
 \begin{document}
 
-
-
-\pagestyle{headings}
-\setlength{\abovedisplayshortskip}{-2mm}
-\pagenumbering{Alph}
-
-\parskip 4mm
-\pagestyle{empty}
+\frontmatter %% Makes everything before mainmatter acutally center, and not 1.5 col.
 \subfile{tex/forside}
-
-\parskip 0.5mm
-\pagestyle{headings}
-\pagenumbering{roman}
 \tableofcontents
-\newpage
 
-\parskip 4mm
-\pagenumbering{arabic}
-
-\setcounter{margintocdepth}{\sectiontocdepth}
+\setcounter{margintocdepth}{\sectiontocdepth} %% Make margin toc include only section level.
+\mainmatter
 
 % \subfile{tex/kapittel1}
 \subfile{tex/kapittel1_0_trans}
@@ -116,6 +102,7 @@
 \subfile{tex/kapittel3_0_trans}
 \subfile{tex/kapittel4_0_trans}
 \subfile{tex/kapittel5_0_trans}
+\backmatter
 \subfile{bibliografi}
 
 %******************************

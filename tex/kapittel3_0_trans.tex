@@ -55,10 +55,9 @@ where $\va*{r}$ is the position vector of the point P measured from the current 
 %
 In the experiment, you will examine the magnetic field along the axis of circular coils. The simplest circular spool you can make consists of a simple wire loop as shown in Figure \ref{magnetfelt.fig1}.
 
-\begin{figure*}[!ht]
-\RawFloats
-    \setlength{\unitlength}{0.8mm}
-    \begin{picture}(120,90)(-10,-20)
+\begin{figure}[!ht]
+    \setlength{\unitlength}{0.6mm}
+    \begin{picture}(177,90)(0,-20)
         \linethickness{0.3mm}
         \qbezier(30, 60)(11, 58.5)(9,30)
         \qbezier(9, 30)(8, 3)(24,2) 
@@ -107,7 +106,7 @@ In the experiment, you will examine the magnetic field along the axis of circula
     \end{picture}
     \caption{The magnetic field on the normal axis of a circular coil.}
     \label{magnetfelt.fig1}
-\end{figure*}
+\end{figure}
 
 The magnetic field on the axis of the coil will have a component in the axis direction $x$ and a component normal to this. According to Biot-Savart's law, the normal component will be zeroed out by contributions (integration) over the entire loop, as the symmetry of the system gives equal strength in all directions. For the $x$ component we get by inserting $r^2 = x^2 + \xi^2$ and using $\sin \alpha = \xi/r$,
 %
@@ -400,7 +399,6 @@ Calculate also one of the values of $B$ by hand, and verify the value of the dif
 Anti-Helmholtz coils consist of two identical, short coils connected in series set up concentrically at a distance $a$ as shown in Figure \ref{magnetfelt.fig2a}, with opposite directions of the magnetic field. How do you find the field in this configuration?
 
 \begin{marginfigure}
-\RawFloats
     \setlength{\unitlength}{0.6mm}
     \begin{picture}(120,80)(30,0)
         \linethickness{0.5mm}
@@ -685,7 +683,6 @@ A suggested table is shown in Table \ref{tab:example-table3}.
 \end{comment}
 
 \begin{figure}[ht]
-\RawFloats
     \begin{center}
     %\vspace{25mm}
     \includegraphics[width=0.7\textwidth]{fig/magnetfelt-tab3.eps}
@@ -883,7 +880,6 @@ where $d$ is the thickness of the Hall probe where the magnetic field $B$ is pre
 
 %\vspace{1cm}
 \begin{marginfigure}
-\RawFloats
     % \begin{minipage}[b]{\linewidth}
     % \centering
     \begin{overpic}[scale=0.5]{fig/HallAx.eps}
