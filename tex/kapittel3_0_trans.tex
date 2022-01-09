@@ -1088,72 +1088,75 @@ Which of these is best to use? Motivate your answer!
     IMPORTANT: The power supply must be switched off during connection. Select current measurement on both the power supply and the multimeter. Use the 10A input on the multimeter.\\
     - Ask the lab supervisor to approve the connection.
     \item Reset the magnetic field sensor. (It is safest to break the coil circuit during zeroing.)
-      \begin{figure}[!ht]
-        \RawFloats
-        \setlength{\unitlength}{0.8mm}
-        \begin{picture}(120,80)(-30,0)
-        
-            \put(30,5){\line(1,0){88}}
-            \put(118,5){\line(0,1){23}}
-            \put(30,5){\line(0,1){14}}
-            \qbezier(118, 28)(124, 28)(129,35)
-            \qbezier(129, 35)(132, 40)(132,45)
-            \qbezier(132,45)(132, 52)(125,58)
-            \qbezier(125,58)(117, 63)(108,58)
-            \qbezier(108,58)(102, 54)(101,45)
-            \qbezier(101,45)(101, 38)(105,34.5)
-            \qbezier(105,34.5)(109, 30)(115,30)
-            %\color{red}
-            \qbezier(115,30)(126, 31)(129,40)
-            \qbezier(129,40)(132, 55)(118,58)
-            \qbezier(118,58)(105, 59)(103,45)
-            \qbezier(103,45)(102, 35)(114,32)
-            \put(120,10){\Large$\uparrow$}%
-            \put(125,10){\large$I$}%
+      \begin{marginfigure}
+        \centering
+        \vspace{-6cm}
+        \includegraphics[width=0.7\textwidth]{fig/circuit_single_coil}
+        % \vspace{-4cm}
+        % \setlength{\unitlength}{0.6mm}
+        % \begin{picture}(120,20)(20,0)
+        %     \put(30,5){\line(1,0){88}}
+        %     \put(118,5){\line(0,1){23}}
+        %     \put(30,5){\line(0,1){14}}
+        %     \qbezier(118, 28)(124, 28)(129,35)
+        %     \qbezier(129, 35)(132, 40)(132,45)
+        %     \qbezier(132,45)(132, 52)(125,58)
+        %     \qbezier(125,58)(117, 63)(108,58)
+        %     \qbezier(108,58)(102, 54)(101,45)
+        %     \qbezier(101,45)(101, 38)(105,34.5)
+        %     \qbezier(105,34.5)(109, 30)(115,30)
+        %     %\color{red}
+        %     \qbezier(115,30)(126, 31)(129,40)
+        %     \qbezier(129,40)(132, 55)(118,58)
+        %     \qbezier(118,58)(105, 59)(103,45)
+        %     \qbezier(103,45)(102, 35)(114,32)
+        %     \put(120,10){\Large$\uparrow$}%
+        %     \put(125,10){\large$I$}%
             
-            \put(50,15){\framebox(15,25)}%Multimeter
-            \put(52.5,32){\framebox(10,5)}%Multimeter display
-            \put(56,20){\circle{3}}%
-            \put(55,18.7){\small$\bullet$}%
-            \put(62,20){\circle{3}}%
-            \put(60.7,18.7){\small$\bullet$}%
+        %     \put(50,15){\framebox(15,25)}%Multimeter
+        %     \put(52.5,32){\framebox(10,5)}%Multimeter display
+        %     \put(56,20){\circle{3}}%
+        %     \put(55,18.7){\small$\bullet$}%
+        %     \put(62,20){\circle{3}}%
+        %     \put(60.7,18.7){\small$\bullet$}%
             
-            \put(61.5,20){\line(1,0){53}}
-            \put(114,32){\line(0,-1){12}}
-            \put(52,16){\tiny\sf COM}%
-            \put(60,16){\tiny\sf 10A}% 
-            \put(45,45){\sf Multimeter}%
-            %\color{red}
-            \put(114,20){\circle{3}}%
-            \put(113,18.7){\small$\bullet$}%
-            \put(118,20){\circle{3}}%
-            \put(116.7,18.7){\small$\bullet$}%
-            \put(105,22){\sf Bl\aa}%
-            \put(119,22){\sf R\o d}%
-            %\color{green}
-            %%%%%%%%%Mascot begins
-            \put(20,15){\framebox(20,34)}%Mascot
-            \put(22,40){\framebox(9,5)}%Mascot
-            \put(35,43){\framebox(3,5)}%Mascot
-            \put(35,36){\framebox(3,5)}%Mascot
-            \put(35,29){\framebox(3,5)}%Mascot
-            \put(30,20){\circle{3}}%
-            \put(28.8,18.7){\small$\bullet$}%
-            \put(36,20){\circle{3}}%
-            \put(34.6,18.7){\small$\bullet$}%
-            \put(28,23){$+$}%
-            \put(34,23){$-$}%
-            \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
-            \put(23,54){\sf Mascot}%
-            %%%%%%%%%Mascit ends
-            %\put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
-        \end{picture}
+        %     \put(61.5,20){\line(1,0){53}}
+        %     \put(114,32){\line(0,-1){12}}
+        %     \put(52,16){\tiny\sf COM}%
+        %     \put(60,16){\tiny\sf 10A}% 
+        %     \put(45,45){\sf Multimeter}%
+        %     %\color{red}
+        %     \put(114,20){\circle{3}}%
+        %     \put(113,18.7){\small$\bullet$}%
+        %     \put(118,20){\circle{3}}%
+        %     \put(116.7,18.7){\small$\bullet$}%
+        %     \put(100,22){\sf Blue}%
+        %     \put(119,22){\sf Red}%
+        %     %\color{green}
+        %     %%%%%%%%%Mascot begins
+        %     \put(20,15){\framebox(20,34)}%Mascot
+        %     \put(22,40){\framebox(9,5)}%Mascot
+        %     \put(35,43){\framebox(3,5)}%Mascot
+        %     \put(35,36){\framebox(3,5)}%Mascot
+        %     \put(35,29){\framebox(3,5)}%Mascot
+        %     \put(30,20){\circle{3}}%
+        %     \put(28.8,18.7){\small$\bullet$}%
+        %     \put(36,20){\circle{3}}%
+        %     \put(34.6,18.7){\small$\bullet$}%
+        %     \put(28,23){$+$}%
+        %     \put(34,23){$-$}%
+        %     \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
+        %     \put(23,54){\sf Mascot}%
+        %     %%%%%%%%%Mascit ends
+        %     %\put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
+        % \end{picture}
         \caption{%
-            Spolekrets. Mascot kraftforsyning, multimeter og spolen er vist. Merk deg vikleretningen for spolen, spolen er sett mot siden med koplingsbøssingene.
-            
+            The coil circuit.
+            Mascot power supply, multimeter, and the coil are shown.
+            Note the direction of the windings, and where the coil is here shown from the direction of the connectors on the coil.
         }
         \label{magnetfelt.fig6}
-    \end{figure}
+    \end{marginfigure}
 
     \item Measure the magnetic field $B(x)$ along the axis of the coil as a function of the distance $x$ from the center plane of the coil.
     %\footnote{TIPS: Definer spolens midtplan på følgende måte: Finn magnetfeltets maksimumsverdi. Finn to posisjoner på hver side av spolens midtplan hvor magnetfeltene er like og ligger ca \SI{5}{\percent} under maksimumsverdien. Midtplanet ligger midt i mellom disse to posisjonene.}
@@ -1165,154 +1168,156 @@ Analyze the results and compare measured and calculated value. Print out the tab
 \subsection{Magnetic field in Helmholtz coil}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Task: \ \
-\emph{ Kartlegge magnetfeltet på aksen mellom to korte spoler sfa. avstanden fra spolens midtplan og avstanden mellom spolene.}
+Task:
+\emph{Investigate the magnetic field along the axis between two short coils as a function of the distnace from the center of the coil, and the distance between the coils.}
  
-\textbf{Framgangsmåte:}
-\vspace{-5mm}
+\textbf{Procedure:}
 \begin{itemize}
-    \item Mount on the movable trolley two short coils at a distance $a = R$ from the center plane to the center plane.
-    \item Measure the magnetic field $B(x)$ along the coil axis as a function of the distance $x$ from the center plane between the coils with e.g. $I = \SI{1,00}{\ampere}$ and gradually enter the results in the spreadsheet table for the Helmholtz coil. Measure a piece outside the end of the spool.
+    \item Mount on the movable trolley two short coils at a distance $a = R$, measured from center of the coils.
+    \item Measure the magnetic field $B(x)$ along the coil axis as a function of the distance $x$ from the center plane between the coils with e.g. $I = \SI{1.00}{\ampere}$ and enter the results in the spreadsheet table for the Helmholtz coil. Continue some distance outside the end of the spool.
     \item Repeat the measurement with coil distances $a = 2R$ and $a = R/2$.
-    \item Analyze the results and compare measured and calculated value. Print out the table and graph and paste in the journal.
+    \item Analyze the results and compare measured and calculated value. Print out the table and graph, and paste in the journal.
 \end{itemize}
 
-\begin{figure}[!ht]
-\RawFloats
-    \setlength{\unitlength}{0.8mm}
-    \begin{picture}(120,80)(-10,0)
-        \newsavebox{\OneCoil}
-        \savebox{\OneCoil}(60,60)[l]{
-        %\put(30,5){\line(1,0){88}}
-        %\put(118,5){\line(0,1){23}}
-        \put(114,32){\line(0,-1){26.5}}
-        \put(118,28){\line(0,-1){37.5}}
+\begin{marginfigure}
+  \centering
+  \vspace{-6cm}
+  \includegraphics[width=0.7\textwidth]{fig/circuit_double_coil}
+    % \setlength{\unitlength}{0.4mm}
+    % \begin{picture}(120,10)(20,0)
+    %     \newsavebox{\OneCoil}
+    %     \savebox{\OneCoil}(60,60)[l]{
+    %     %\put(30,5){\line(1,0){88}}
+    %     %\put(118,5){\line(0,1){23}}
+    %     \put(114,32){\line(0,-1){26.5}}
+    %     \put(118,28){\line(0,-1){37.5}}
         
-        %\put(30,5){\line(0,1){14}}
-        \qbezier(118, 28)(124, 28)(129,35)
-        \qbezier(129, 35)(132, 40)(132,45)
-        \qbezier(132,45)(132, 52)(125,58)
-        \qbezier(125,58)(117, 63)(108,58)
-        \qbezier(108,58)(102, 54)(101,45)
-        \qbezier(101,45)(101, 38)(105,34.5)
-        \qbezier(105,34.5)(109, 30)(115,30)
-        %\color{red}
-        \qbezier(115,30)(126, 31)(129,40)
-        \qbezier(129,40)(132, 55)(118,58)
-        \qbezier(118,58)(105, 59)(103,45)
-        \qbezier(103,45)(102, 35)(114,32)
-        }
-        %%Single Coil begins
-        \put(30,5){\line(1,0){123}}
-        %\put(118,5){\line(0,1){23}}
-        \put(118,20){\line(1,0){31}}
-        \put(118,28){\line(0,-1){7}}
+    %     %\put(30,5){\line(0,1){14}}
+    %     \qbezier(118, 28)(124, 28)(129,35)
+    %     \qbezier(129, 35)(132, 40)(132,45)
+    %     \qbezier(132,45)(132, 52)(125,58)
+    %     \qbezier(125,58)(117, 63)(108,58)
+    %     \qbezier(108,58)(102, 54)(101,45)
+    %     \qbezier(101,45)(101, 38)(105,34.5)
+    %     \qbezier(105,34.5)(109, 30)(115,30)
+    %     %\color{red}
+    %     \qbezier(115,30)(126, 31)(129,40)
+    %     \qbezier(129,40)(132, 55)(118,58)
+    %     \qbezier(118,58)(105, 59)(103,45)
+    %     \qbezier(103,45)(102, 35)(114,32)
+    %     }
+    %     %%Single Coil begins
+    %     \put(30,5){\line(1,0){123}}
+    %     %\put(118,5){\line(0,1){23}}
+    %     \put(118,20){\line(1,0){31}}
+    %     \put(118,28){\line(0,-1){7}}
         
-        \put(30,5){\line(0,1){14}}
-        \qbezier(118, 28)(124, 28)(129,35)
-        \qbezier(129, 35)(132, 40)(132,45)
-        \qbezier(132,45)(132, 52)(125,58)
-        \qbezier(125,58)(117, 63)(108,58)
-        \qbezier(108,58)(102, 54)(101,45)
-        \qbezier(101,45)(101, 38)(105,34.5)
-        \qbezier(105,34.5)(109, 30)(115,30)
-        %\color{red}
-        \qbezier(115,30)(126, 31)(129,40)
-        \qbezier(129,40)(132, 55)(118,58)
-        \qbezier(118,58)(105, 59)(103,45)
-        \qbezier(103,45)(102, 35)(114,32)
-        \put(90,6.5){\Large$\longrightarrow$}%
-        \put(103,6.5){\large$I$}%
+    %     \put(30,5){\line(0,1){14}}
+    %     \qbezier(118, 28)(124, 28)(129,35)
+    %     \qbezier(129, 35)(132, 40)(132,45)
+    %     \qbezier(132,45)(132, 52)(125,58)
+    %     \qbezier(125,58)(117, 63)(108,58)
+    %     \qbezier(108,58)(102, 54)(101,45)
+    %     \qbezier(101,45)(101, 38)(105,34.5)
+    %     \qbezier(105,34.5)(109, 30)(115,30)
+    %     %\color{red}
+    %     \qbezier(115,30)(126, 31)(129,40)
+    %     \qbezier(129,40)(132, 55)(118,58)
+    %     \qbezier(118,58)(105, 59)(103,45)
+    %     \qbezier(103,45)(102, 35)(114,32)
+    %     \put(90,6.5){\Large$\longrightarrow$}%
+    %     \put(103,6.5){\large$I$}%
         
-        \put(50,15){\framebox(15,25)}%Multimeter
-        \put(52.5,32){\framebox(10,5)}%Multimeter display
-        \put(56,20){\circle{3}}%
-        \put(55,18.7){\small$\bullet$}%
-        \put(62,20){\circle{3}}%
-        \put(60.7,18.7){\small$\bullet$}%
+    %     \put(50,15){\framebox(15,25)}%Multimeter
+    %     \put(52.5,32){\framebox(10,5)}%Multimeter display
+    %     \put(56,20){\circle{3}}%
+    %     \put(55,18.7){\small$\bullet$}%
+    %     \put(62,20){\circle{3}}%
+    %     \put(60.7,18.7){\small$\bullet$}%
         
-        \put(61.5,20){\line(1,0){53}}
-        \put(114,32){\line(0,-1){12}}
-        \put(52,16){\tiny\sf COM}%
-        \put(45,45){\sf Multimeter}%
-        %\color{red}
-        \put(114,20){\circle{3}}%
-        \put(113,18.7){\small$\bullet$}%
-        \put(118,20){\circle{3}}%
-        \put(116.7,18.7){\small$\bullet$}%
-        \put(105,22){\sf Bl\aa}%
-        \put(119,22){\sf R\o d}%
-        %\color{green}
-        %%%%%%%%%Mascot begins
-        \put(20,15){\framebox(20,34)}%Mascot
-        \put(22,40){\framebox(9,5)}%Mascot
-        \put(35,43){\framebox(3,5)}%Mascot
-        \put(35,36){\framebox(3,5)}%Mascot
-        \put(35,29){\framebox(3,5)}%Mascot
-        \put(30,20){\circle{3}}%
-        \put(28.8,18.7){\small$\bullet$}%
-        \put(36,20){\circle{3}}%
-        \put(34.6,18.7){\small$\bullet$}%
-        \put(28,23){$+$}%
-        \put(34,23){$-$}%
-        \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
-        \put(23,54){\sf Mascot}%
-        %%%%%%%%%Mascot ends
-        %\color{green}
-        \put(35,10){\usebox{\OneCoil}}
-        %\color{red}
-        \put(149,30){\circle{3}}%
-        \put(148,28.7){\small$\bullet$}%
-        \put(153,30){\circle{3}}%
-        \put(151.7,28.7){\small$\bullet$}%
-        \put(140,32){\sf Bl\aa}%
-        \put(154,32){\sf R\o d}%
-        %\qbezier(90,32)(128, 51)(166,70)
-        %\put(90,30){\line(2,1){22}}
-        \multiput(86,30)(14,7){6}{\line(2,1){12}}
-        %\put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
-    \end{picture}
+    %     \put(61.5,20){\line(1,0){53}}
+    %     \put(114,32){\line(0,-1){12}}
+    %     \put(52,16){\tiny\sf COM}%
+    %     \put(45,45){\sf Multimeter}%
+    %     %\color{red}
+    %     \put(114,20){\circle{3}}%
+    %     \put(113,18.7){\small$\bullet$}%
+    %     \put(118,20){\circle{3}}%
+    %     \put(116.7,18.7){\small$\bullet$}%
+    %     \put(105,22){\sf Bl\aa}%
+    %     \put(119,22){\sf R\o d}%
+    %     %\color{green}
+    %     %%%%%%%%%Mascot begins
+    %     \put(20,15){\framebox(20,34)}%Mascot
+    %     \put(22,40){\framebox(9,5)}%Mascot
+    %     \put(35,43){\framebox(3,5)}%Mascot
+    %     \put(35,36){\framebox(3,5)}%Mascot
+    %     \put(35,29){\framebox(3,5)}%Mascot
+    %     \put(30,20){\circle{3}}%
+    %     \put(28.8,18.7){\small$\bullet$}%
+    %     \put(36,20){\circle{3}}%
+    %     \put(34.6,18.7){\small$\bullet$}%
+    %     \put(28,23){$+$}%
+    %     \put(34,23){$-$}%
+    %     \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
+    %     \put(23,54){\sf Mascot}%
+    %     %%%%%%%%%Mascot ends
+    %     %\color{green}
+    %     \put(35,10){\usebox{\OneCoil}}
+    %     %\color{red}
+    %     \put(149,30){\circle{3}}%
+    %     \put(148,28.7){\small$\bullet$}%
+    %     \put(153,30){\circle{3}}%
+    %     \put(151.7,28.7){\small$\bullet$}%
+    %     \put(140,32){\sf Bl\aa}%
+    %     \put(154,32){\sf R\o d}%
+    %     %\qbezier(90,32)(128, 51)(166,70)
+    %     %\put(90,30){\line(2,1){22}}
+    %     \multiput(86,30)(14,7){6}{\line(2,1){12}}
+    %     %\put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
+    % \end{picture}
     \caption{%
-        Oppkopling av Helmholtzspoler. For å få spolene nærme hverandre nok må du montere spolene slik at koplingsbøssingene peker utover for begge spoler. Pass på at strømretningene i hver spole er den samme.
+        The Helmholtz coil circuit.
+        Note that for the coils to be sufficiently close, the coils must be mounted with the connectors pointing out.
+        Take care to have the current flow in the same direction in each coil.
     }
     \label{magnetfelt.fig7}
-\end{figure}
+\end{marginfigure}
 
 \subsection{Magnetic field in Anti-Helmholtz coil}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Task: \ \
-\emph{ Gjør samme eksperiment som over for Anti-Helmholtzspoler.}
+Task:
+\emph{Repeat the same experiment as above for Anti-Helmholtz coils.}
 
 \subsection{Magnetic field in solenoid}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Task: \ \
-\emph{ Kartlegg magnetfeltet på aksen til en solenoide.}
+Task:
+\emph{Investigate the magnetic field along the axis of a solenoid.}
 
-\textbf{Framgangsmåte:}
-\vspace{-5mm}
+\textbf{Procedure:}
 \begin{itemize}
     \item Mount the solenoid on the movable carriage and connect the circuit.
-    \item Measure the magnetic field $B(x)$ along the axis of the solenoid as a function of the distance $x$ from the end plane of the solenoid and enter the results in the spreadsheet table gradually.
-    \item Analyze the results and compare measured and calculated value. Print out the table and graph and paste in the journal.
+    \item Measure the magnetic field $B(x)$ along the axis of the solenoid as a function of the distance $x$ from the end plane of the solenoid, and enter the results in the spreadsheet.
+    \item Analyze the results and compare measured and calculated value. Print out the table and graph, and paste in the journal.
 \end{itemize}
 
 \subsection{Magnetic field in short coil - extra assignment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Task: \ \
-\emph{ Kartlegg magnetfeltet parallelt en kort spole (y-aksen) sfa. avstanden fra spolen.}
+Task:
+\emph{Investigate the magnetic field parallel to a short coil ($y$-axis) as a function of the distance from the coil.}
  
 %Drøfting av måleprosedyren: 
 
-Here the coil is mounted so that the magnetic field sensor passes parallel to the coil. How does the field vary? (Note: field direction.) Explain why the curve looks the way it does.
+Here the coil is mounted so that the magnetic field sensor passes parallel to the coil. How does the field vary? (Take note of the direction of the field.) Explain why the curve looks the way it does.
 
 \subsection{General Discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
-   \item Carry out error analysis of the results and discuss possible systematic deviations
+   \item Carry out error analysis of the results and discuss possible systematic deviations.
    \item Discuss discrepancies between measurement results and the modeling you have included in the calculation section. Where are the biggest differences? What is the reason?
     %\item Diskuter bruken av høyrehåndsregelen.
     %\item Diskuter strøm- og spenningsregulering av kraftforsyninger.
