@@ -160,10 +160,13 @@ Constants are entered in rows under the heading.
     Magnetic permeability for vacuum, $\mu_0$ & 1.26E-0.6 & H/m\\
     Number of windings, $N$ & 330 & \#\\
     Current, $I$ & 1.00 & A\\
-    Average loop radius, $R$ & 0.07 & m
+    Average loop radius, $R$ & 0.07 & m\\
+    \hline
   \end{tabular}
+  
+  \vspace{1em}
   \begin{tabular}{rrrrr}
-    \hline\hline\\
+    \hline\\
     \thead{Position} & \thead{$x$} & \thead{Calculated} & \thead{Measured} & \thead{Difference}\\
     \thead{(cm)} & \thead{(m)} & \thead{(gauss = $10^{-4}T$)} & \thead{(gauss)} & \thead{(\%)}\\
     \hline
@@ -267,7 +270,7 @@ If you differentiate equation \eqref{eq:Helmholtz} with respect to $x$ you will 
 \]
 when $a = R$. This means that when $a = R$ you have a geometry that gives you a particularly good homogeneous magnetic field in the area between the coils. Such Helmholtz coils are used to set up homogeneous magnetic fields in many situations.
 
-\begin{marginfigure}%[!ht]
+\begin{marginfigure}[-2cm]%[!ht]
     \setlength{\unitlength}{0.6mm}
     \begin{picture}(120,80)(30,0)
         \linethickness{0.5mm}
@@ -328,11 +331,14 @@ A suggested table is shown in Table \ref{tab:example-table2}.
     Average loop radius, $R$ & 0.07 & \\
     \hline
   \end{tabular}
+  
+  \vspace{1em}
   \begin{tabular}{rr|rrr|lrl|rlr}
     \hline
     && \multicolumn{3}{c}{$a=2R$}& \multicolumn{3}{c}{$a=2R$}& \multicolumn{3}{c}{$a=2R$}\\
     Position& $x$ & Calculated & Measured & Difference& Calculated & Measured & Difference& Calculated & Measured & Difference\\
     (cm) & (m) & (gauss) & (gauss) & (\%) & (gauss) & (gauss) & (\%) & (gauss) & (gauss) & (\%)\\
+    \hline
     30 & -0.20 & 3.626 &  & -100 & 2.454 &  & -100 & 2.213 &  & -100\\
     35 & -0.15 & 9.286 &  & -100 & 5.478 &  & -100 & 4.719 &  & -100\\
     40 & -0.10 & 24.643 &  & -100 & 14.549 &  & -100 & 11.996 &  & -100\\
@@ -530,7 +536,117 @@ Analytically the angles are given by
 where $R$ is the inner radius of the solenoid and $z$ is the distance from the left end of the solenoid to the point $P$. Inside the solenoid the angles are restricted to $\theta_1 \in \langle 0, \pi/2 \rangle$ and $\theta_2 \in \langle \pi/2, \pi \rangle$. The formula also applies outside the solenoid.
 %
 
-\begin{figure*}[p]
+\begin{proof}
+  \emph{We offer here a short proof of Equation \eqref{eq:solenoide}:} In equation \eqref{eq:Biot.Savart3} we have found magnetic fields on the axis at a distance $x$ from a single loop. In a solenoid we have many loops close together, we define current per unit length as $\flatfrac{I N}{\ell} = I n$, where $n$ is the number of windings per length. Flux density at a point P on the axis then receives a contribution from the thin current loop $\dd{I} = I n \dd{x}$ in position $x$, and according to the first part of equation \eqref{eq:Biot.Savart3} the flux density is 
+  \begin{equation}
+    \dd B 
+    = \frac{\mu_0 \dd{I}}{4 \pi} \frac{2\pi R^2}{\qty(x^2 + R^2)^{3/2}}
+    = \frac{\mu_0 I n}{2}  \frac{R^2}{ \qty( R^2 + x^2)^{3/2}} \dd{x} .
+    \label{eq:solenoide2}
+  \end{equation}
+  % 
+  With $\theta$ as the angle at point P between the solenoid axis and the periphery at position $x$ (Figure \ref{magnetfelt.fig3}) we see that $\tan \theta = R / x$, and differentiation of $x = R / \tan \theta$ gives
+  \begin{equation}
+    \dd{x} 
+    = R \frac{-1}{\tan^2 \theta} \frac{1}{\cos^2\theta} \dd{\theta} 
+    = -R \frac{1}{\sin^2\theta} \dd{\theta} .
+  \end{equation}
+  % 
+  We notice that
+  \begin{equation}
+    \sin^3 \theta = \frac{R^3}{(R^2 + x^2)^{3/2}},
+  \end{equation}
+  so that
+  \begin{equation}
+    \dd{x} 
+    = -R \frac{1}{\sin^3\theta} \sin\theta \dd{\theta}
+    = -R \frac{(R^2 + x^2)^{3/2}}{R^3} \sin\theta \dd{\theta}
+  \end{equation}
+  and by substituting $\tan \theta = R / x$ in equation \eqref{eq:solenoide2} and inserting boundaries $\theta_2$ (right end, lowest $x$) to $\theta_1$ (left end, highest $x$), we will get
+  % 
+  \begin{equation}
+    B(x) 
+    = -\frac{\mu_0 I n}{2} \int_{\theta_2}^{\theta_1} \sin \theta \dd{\theta}
+    = \frac{\mu_0 I n}{2} (\cos \theta_1 - \cos \theta_2),
+    \label{eq:solenoide3}
+  \end{equation}
+  the result we wanted to show.
+\end{proof}
+% Formelen gjelder også utenfor solenoiden med $\theta_1 > \pi/2$ utenfor høyre ende og $\theta_2 < \pi/2$ utenfor venstre ende
+
+\emph{ 5. What is the expression of the magnetic field deep inside the solenoid, and what is it at the end of the solenoid?}
+\\
+TIP: What are $\theta_1$ and $\theta_2$ at these positions?
+
+Suppose you have a solenoid with $N = \SI{397}{\windings}$, $\ell = \SI{420}{\mm}$, $R = \SI{50}{\mm}$ and current $I = \SI{1.00}{\ampere}$.
+
+\emph{ 6A. Make a table of the magnetic flux density $B(z)$ on the axis of the solenoid in the area $\SI{-10}{\cm} < z < \SI{50}{\cm}$ where $z = 0$ at the left edge of the solenoid.} % siunitx klarer ikke å merke tekstfamilien her...
+
+%Hvis  $R \ll \ell$ og $x \neq 0$ og $x \neq \ell$ kan du ved rekkeutvikling finne at 
+% Tatt ut denne approksimasjonen, da den ikke er god ved endene.
+% Beregn forholdet B(X)/l på aksen -l \ t solenoiden i området2S:<J < x <s'o mm og framstill resultatet i et kurvediagram 
+
+A suggested table is shown in Table \ref{tab:example-table3}.
+
+\begin{table}[h]
+  \centering
+  \caption{Calculated and measured values of the magnetic field $B$ along the axis of a solenoid as a function of the distance $z$.\label{tab:example-table3}}
+  \scriptsize
+  \begin{tabular}{lrl}
+    \hline
+    Magnetic permeability for vacuum, $\mu_0$ & 1.26E-0.6 & H/m\\
+    Number of windings, $N$ & 397 & \#\\
+    Current, $I$ & 1.00 & A\\
+    Inner loop radius, $R$ & 0.05 & m\\
+    Length, $l$ & 0.42 & m\\
+    \hline
+  \end{tabular}
+  
+  \vspace{1em}
+  \begin{tabular}{rrrrrrr}
+    \hline
+    Position & $z$ & $\cos \theta_1$ & $\cos \theta _2$ & Calculated & Measured & Difference\\
+    (cm) & (m) & & & (gauss) & (gauss) & (\%)\\
+    \hline
+60 & -0.10 & -0.894 & -0.995 & 0.600 &  & -100.0\\
+55 & -0.05 & -0.707 & -0.994 & 1.707 &  & -100.0\\
+53 & -0.03 & -0.514 & -0.994 & 2.848 &  & -100.0\\
+52 & -0.02 & -0.371 & -0.994 & 3.696 &  & -100.0\\
+51 & -0.01 & -0.196 & -0.993 & 4.736 &  & -100.0\\
+50 & 0.00 & 0.000 & -0.993 & 5.899 &  & -100.0\\
+49 & 0.01 & 0.196 & -0.993 & 7.062 &  & -100.0\\
+  \end{tabular}
+\end{table}
+%
+% BEGIN RECEIVE ORGTBL magnetfelt.tab3
+\begin{tabular}{rrrrrlr}
+% 60 & -0.10 & -0.894 & -0.995 & 0.600 &  & -100.0\\
+% 55 & -0.05 & -0.707 & -0.994 & 1.707 &  & -100.0\\
+% 53 & -0.03 & -0.514 & -0.994 & 2.848 &  & -100.0\\
+% 52 & -0.02 & -0.371 & -0.994 & 3.696 &  & -100.0\\
+% 51 & -0.01 & -0.196 & -0.993 & 4.736 &  & -100.0\\
+% 50 & 0.00 & 0.000 & -0.993 & 5.899 &  & -100.0\\
+% 49 & 0.01 & 0.196 & -0.993 & 7.062 &  & -100.0\\
+\end{tabular}
+% END RECEIVE ORGTBL magnetfelt.tab3
+\begin{comment}
+#+ORGTBL: SEND magnetfelt.tab3 orgtbl-to-latex :splice nil :skip 0
+| 60 | -0.10 | -0.894 | -0.995 | 0.600 |   | -100.0 |
+| 55 | -0.05 | -0.707 | -0.994 | 1.707 |   | -100.0 |
+| 53 | -0.03 | -0.514 | -0.994 | 2.848 |   | -100.0 |
+| 52 | -0.02 | -0.371 | -0.994 | 3.696 |   | -100.0 |
+| 51 | -0.01 | -0.196 | -0.993 | 4.736 |   | -100.0 |
+| 50 |  0.00 |  0.000 | -0.993 | 5.899 |   | -100.0 |
+| 49 |  0.01 |  0.196 | -0.993 | 7.062 |   | -100.0 |
+\end{comment}
+
+\emph{ 6B. Present the result in a line diagram}
+
+The spreadsheet shall also be used for the calculation of expected magnetic field strengths as a result of Biot-Savart's law \eqref{eq:Biot.Savart3} and subsequent comparison with experimentally measured magnetic field strengths in section \ref{ch.magnetfelt.eksperimentelt}.
+
+\emph{ 6C. Include a column for measured value of $B$ and a column for deviations between measured and calculated value given in \si{\percent}}. (A suggestion is given in the table in Table \ref{tab:example-table3}.)
+
+\begin{figure*}[bp]
 \centering
     \setlength{\unitlength}{1.3mm}
     \begin{picture}(120,80)(30,20)
@@ -589,120 +705,13 @@ where $R$ is the inner radius of the solenoid and $z$ is the distance from the l
     }
 \end{figure*}
 
-\begin{proof}
-  \emph{We offer here a short proof of Equation \eqref{eq:solenoide}:} In equation \eqref{eq:Biot.Savart3} we have found magnetic fields on the axis at a distance $x$ from a single loop. In a solenoid we have many loops close together, we define current per unit length as $\flatfrac{I N}{\ell} = I n$, where $n$ is the number of windings per length. Flux density at a point P on the axis then receives a contribution from the thin current loop $\dd{I} = I n \dd{x}$ in position $x$, and according to the first part of equation \eqref{eq:Biot.Savart3} the flux density is 
-  \begin{equation}
-    \dd B 
-    = \frac{\mu_0 \dd{I}}{4 \pi} \frac{2\pi R^2}{\qty(x^2 + R^2)^{3/2}}
-    = \frac{\mu_0 I n}{2}  \frac{R^2}{ \qty( R^2 + x^2)^{3/2}} \dd{x} .
-    \label{eq:solenoide2}
-  \end{equation}
-  % 
-  With $\theta$ as the angle at point P between the solenoid axis and the periphery at position $x$ (Figure \ref{magnetfelt.fig3}) we see that $\tan \theta = R / x$, and differentiation of $x = R / \tan \theta$ gives
-  \begin{equation}
-    \dd{x} 
-    = R \frac{-1}{\tan^2 \theta} \frac{1}{\cos^2\theta} \dd{\theta} 
-    = -R \frac{1}{\sin^2\theta} \dd{\theta} .
-  \end{equation}
-  % 
-  We notice that
-  \begin{equation}
-    \sin^3 \theta = \frac{R^3}{(R^2 + x^2)^{3/2}},
-  \end{equation}
-  so that
-  \begin{equation}
-    \dd{x} 
-    = -R \frac{1}{\sin^3\theta} \sin\theta \dd{\theta}
-    = -R \frac{(R^2 + x^2)^{3/2}}{R^3} \sin\theta \dd{\theta}
-  \end{equation}
-  and by substituting $\tan \theta = R / x$ in equation \eqref{eq:solenoide2} and inserting boundaries $\theta_2$ (right end, lowest $x$) to $\theta_1$ (left end, highest $x$), we will get
-  % 
-  \begin{equation}
-    B(x) 
-    = -\frac{\mu_0 I n}{2} \int_{\theta_2}^{\theta_1} \sin \theta \dd{\theta}
-    = \frac{\mu_0 I n}{2} (\cos \theta_1 - \cos \theta_2),
-    \label{eq:solenoide3}
-  \end{equation}
-  the result we wanted to show.
-\end{proof}
-% Formelen gjelder også utenfor solenoiden med $\theta_1 > \pi/2$ utenfor høyre ende og $\theta_2 < \pi/2$ utenfor venstre ende
 
-\emph{ 5. What is the expression of the magnetic field deep inside the solenoid, and what is it at the end of the solenoid?}
-\\
-TIP: What are $\theta_1$ and $\theta_2$ at these positions?
-
-Suppose you have a solenoid with $N = \SI{397}{\windings}$, $\ell = \SI{420}{\mm}$, $R = \SI{50}{\mm}$ and current $I = \SI{1.00}{\ampere}$.
-
-\emph{ 6A. Make a table of the magnetic flux density $B(z)$ on the axis of the solenoid in the area $\SI{-10}{\cm} < z < \SI{50}{\cm}$ where $z = 0$ at the left edge of the solenoid.} % siunitx klarer ikke å merke tekstfamilien her...
-
-%Hvis  $R \ll \ell$ og $x \neq 0$ og $x \neq \ell$ kan du ved rekkeutvikling finne at 
-% Tatt ut denne approksimasjonen, da den ikke er god ved endene.
-% Beregn forholdet B(X)/l på aksen -l \ t solenoiden i området2S:<J < x <s'o mm og framstill resultatet i et kurvediagram 
-
-A suggested table is shown in Table \ref{tab:example-table3}.
-
-\begin{table}[h]
-  \centering
-  \caption{Calculated and measured values of the magnetic field $B$ along the axis of a solenoid as a function of the distance $z$.\label{tab:example-table3}}
-  \scriptsize
-  \begin{tabular}{rrrrrrr}
-    \hline
-    Position & $z$ & $\cos \theta_1$ & $\cos \theta _2$ & Calculated & Measured & Difference\\
-    (cm) & (m) & & & (gauss) & (gauss) & (\%)\\
-    \hline
-60 & -0.10 & -0.894 & -0.995 & 0.600 &  & -100.0\\
-55 & -0.05 & -0.707 & -0.994 & 1.707 &  & -100.0\\
-53 & -0.03 & -0.514 & -0.994 & 2.848 &  & -100.0\\
-52 & -0.02 & -0.371 & -0.994 & 3.696 &  & -100.0\\
-51 & -0.01 & -0.196 & -0.993 & 4.736 &  & -100.0\\
-50 & 0.00 & 0.000 & -0.993 & 5.899 &  & -100.0\\
-49 & 0.01 & 0.196 & -0.993 & 7.062 &  & -100.0\\
-  \end{tabular}
-\end{table}
-%
-% BEGIN RECEIVE ORGTBL magnetfelt.tab3
-\begin{tabular}{rrrrrlr}
-% 60 & -0.10 & -0.894 & -0.995 & 0.600 &  & -100.0\\
-% 55 & -0.05 & -0.707 & -0.994 & 1.707 &  & -100.0\\
-% 53 & -0.03 & -0.514 & -0.994 & 2.848 &  & -100.0\\
-% 52 & -0.02 & -0.371 & -0.994 & 3.696 &  & -100.0\\
-% 51 & -0.01 & -0.196 & -0.993 & 4.736 &  & -100.0\\
-% 50 & 0.00 & 0.000 & -0.993 & 5.899 &  & -100.0\\
-% 49 & 0.01 & 0.196 & -0.993 & 7.062 &  & -100.0\\
-\end{tabular}
-% END RECEIVE ORGTBL magnetfelt.tab3
-\begin{comment}
-#+ORGTBL: SEND magnetfelt.tab3 orgtbl-to-latex :splice nil :skip 0
-| 60 | -0.10 | -0.894 | -0.995 | 0.600 |   | -100.0 |
-| 55 | -0.05 | -0.707 | -0.994 | 1.707 |   | -100.0 |
-| 53 | -0.03 | -0.514 | -0.994 | 2.848 |   | -100.0 |
-| 52 | -0.02 | -0.371 | -0.994 | 3.696 |   | -100.0 |
-| 51 | -0.01 | -0.196 | -0.993 | 4.736 |   | -100.0 |
-| 50 |  0.00 |  0.000 | -0.993 | 5.899 |   | -100.0 |
-| 49 |  0.01 |  0.196 | -0.993 | 7.062 |   | -100.0 |
-\end{comment}
-
-\begin{figure}[ht]
-    \begin{center}
-    %\vspace{25mm}
-    \includegraphics[width=0.7\textwidth]{fig/magnetfelt-tab3.eps}
-    \end{center}
-    \caption{%
-        Utdrag fra tabell for magnetfelt på aksen til Helmholtzspoler.
-    }
-    \label{magnetfelt.tab3}
-\end{figure}
-
-\emph{ 6B. Present the result in a line diagram}
-
-The spreadsheet shall also be used for the calculation of expected magnetic field strengths as a result of Biot-Savart's law \eqref{eq:Biot.Savart3} and subsequent comparison with experimentally measured magnetic field strengths in section \ref{ch.magnetfelt.eksperimentelt}.
-
-\emph{ 6C. Include a column for measured value of $B$ and a column for deviations between measured and calculated value given in \si{\percent}}. (A suggestion is given in the table in Table \ref{tab:example-table3}.)
-
+\FloatBarrier % Fix solenoid figure floating 
 \subsection{Python Data Analysis}
-The previous tasks can be done in Python, for example. It is advisable to save the data in text files. Here we use comma separated files as shown below.
+The previous tasks can be done in Python, for example. It is advisable to save the data in text files. Here we use comma separated files as shown in the margin.
 \begin{marginlisting}
-  \caption{Example of CSV file.}
+  % \caption{Example of CSV file.}
+  Example of a CSV file.
 \begin{verbatim}
 # Position (m), B-field (Gauss)
 0.245,0.0
@@ -710,11 +719,10 @@ The previous tasks can be done in Python, for example. It is advisable to save t
 ...
 \end{verbatim}
 \end{marginlisting}
-Here, the first column represents the \emph{position}, and the second column represents \emph{Measured} in Table \ref{tab:example-table}. The remaining columns can be calculated in Python. To read the data, we create the following code:
+Here, the first column represents the \emph{Position}, and the second column represents \emph{Measured} in Table \ref{tab:example-table}. The remaining columns can be calculated in Python. To read the data, we create the following code:
 
 \begin{lstlisting}[language=python]
 # Assumes numpy imported as np.
-  
 def read_CSV(filename):
    data = np.loadtxt (filename, delimiter = ',')
    xe = data [:, 0]
@@ -732,7 +740,7 @@ def B_field_short_coil(x):
 \end{lstlisting}
 To plot the result for the calculated field, we add some lines in the \texttt{main} function. We also need to define some parameters used in the calculation. The whole program then looks like this:
 
-\begin{marginlisting}
+\begin{marginlisting}[-3cm]
 A quick note about the \texttt{main} function.
 You will quite often see code with a function called \texttt{main}, and then a code
 \begin{lstlisting}[language=python,style=kaolstplain,breaklines=false]
@@ -783,13 +791,14 @@ if (__name__ == '__main__'):
     main ()
 \end{lstlisting}
 
-You can now create more functions to plot the results for a Helmholtz coil and a solenoid. Remember that it often pays to divide the program into smaller functions. This makes the code easier to read, but also allows you to reuse much of the code for other purposes. More examples of plotting can be found here: \url{https://nbviewer.jupyter.org/urls/www.numfys.net/media/notebooks/basic_plotting.ipynb}.
+You can now create more functions to plot the results for a Helmholtz coil and a solenoid. Remember that it often pays to divide the program into smaller functions. This makes the code easier to read, but also allows you to reuse much of the code for other purposes.
+More examples of plotting can be found at the NumFys webpage: \url{https://nbviewer.jupyter.org/urls/www.numfys.net/media/notebooks/basic_plotting.ipynb}.
 
 \subsection{Hall effect probe}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{marginfigure}
-    \setlength{\unitlength}{0.7mm}
+\begin{marginfigure}[-2cm]
+    \setlength{\unitlength}{0.6mm}
     \begin{picture}(120,80)(40,20)
         \put(50,30){\framebox(40,10)}%lower rectangle
         \put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
@@ -1049,7 +1058,6 @@ Reading magnetic field strengths from the Hall probe will give a somewhat varyin
 
 Task:
 \emph{Investigate statistical errors in the measurements:}
-\vspace{-5mm}
 \begin{itemize}
     \item Connect the sensors in the PASCO interface and the computer interface. Start Capstone and get ready for data sampling.
     \item Reset and sample data in \SI{10}{\s}. Select data and perform a statistical analysis with built-in functionality in Capstone. What is the standard deviation of the data? What standard deviations do you get if you sample in \SI{1}{\s} and \SI{100}{\s}? How many samples should you use?
@@ -1080,14 +1088,13 @@ Which of these is best to use? Motivate your answer!
     %\item Klargjør multimeteret.\\
     %Sjekk at det er avslått, sett AC/DC innstillingen i stilling DC og funksjonsvelgeren for strømmåling i området 0 - 20 A.\\
     %VIKTIG: Bruk kontakten for tilkopling av likestrøm i området 0 - 20 A. %Bruk denne, ellers går mulitmeterets sikring umiddelbart.
-    \item Connect the coil circuit as shown in figure \ref{magnetfelt.fig6}. \ \
+    \item Connect the coil circuit as shown in Figure \ref{magnetfelt.fig6}. \ \
     IMPORTANT: The power supply must be switched off during connection. Select current measurement on both the power supply and the multimeter. Use the 10A input on the multimeter.\\
     - Ask the lab supervisor to approve the connection.
     \item Reset the magnetic field sensor. (It is safest to break the coil circuit during zeroing.)
-      \begin{marginfigure}
+      \begin{marginfigure}[-10cm]
         \centering
-        \vspace{-6cm}
-        \includegraphics[width=0.7\textwidth]{fig/circuit_single_coil}
+        \includegraphics[width=0.8\textwidth]{fig/circuit_single_coil}
         % \vspace{-4cm}
         % \setlength{\unitlength}{0.6mm}
         % \begin{picture}(120,20)(20,0)
@@ -1170,15 +1177,9 @@ Task:
 \textbf{Procedure:}
 \begin{itemize}
     \item Mount on the movable trolley two short coils at a distance $a = R$, measured from center of the coils.
-    \item Measure the magnetic field $B(x)$ along the coil axis as a function of the distance $x$ from the center plane between the coils with e.g. $I = \SI{1.00}{\ampere}$ and enter the results in the spreadsheet table for the Helmholtz coil. Continue some distance outside the end of the spool.
-    \item Repeat the measurement with coil distances $a = 2R$ and $a = R/2$.
-    \item Analyze the results and compare measured and calculated value. Print out the table and graph, and paste in the journal.
-\end{itemize}
-
 \begin{marginfigure}
   \centering
-  \vspace{-6cm}
-  \includegraphics[width=0.7\textwidth]{fig/circuit_double_coil}
+  \includegraphics[width=0.8\textwidth]{fig/circuit_double_coil}
     % \setlength{\unitlength}{0.4mm}
     % \begin{picture}(120,10)(20,0)
     %     \newsavebox{\OneCoil}
@@ -1279,6 +1280,11 @@ Task:
     }
     \label{magnetfelt.fig7}
 \end{marginfigure}
+    \item Measure the magnetic field $B(x)$ along the coil axis as a function of the distance $x$ from the center plane between the coils with e.g. $I = \SI{1.00}{\ampere}$ and enter the results in the spreadsheet table for the Helmholtz coil. Continue some distance outside the end of the spool.
+    \item Repeat the measurement with coil distances $a = 2R$ and $a = R/2$.
+    \item Analyze the results and compare measured and calculated value. Print out the table and graph, and paste in the journal.
+\end{itemize}
+
 
 \subsection{Magnetic field in Anti-Helmholtz coil}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
