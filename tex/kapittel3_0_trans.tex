@@ -797,7 +797,7 @@ More examples of plotting can be found at the NumFys webpage: \url{https://nbvie
 \subsection{Hall effect probe}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{marginfigure}[-2cm]
+\begin{marginfigure}[-3cm]
     \setlength{\unitlength}{0.6mm}
     \begin{picture}(120,80)(40,20)
         \put(50,30){\framebox(40,10)}%lower rectangle
@@ -1007,7 +1007,10 @@ The following instruments are included in the line-up:
     When current controlled, the maximum current that may be supplied is \SI{2}{\ampere}, given that the  resistance is maximum $R = U/I = \SI{30}{\volt} / \SI{2}{\ampere} = \SI{15}{\ohm}$.
     The box also has a button marked ``range'' which can limit the maximum voltage to \SI{15}{\volt} instead of the standard \SI{30}{\volt}. If \SI{15}{\volt} is selected, the maximum output resistance will be $R = U/I = \SI{15}{\volt} / \SI{2.0}{\ampere} = \SI{7.5}{\ohm}$. At higher output resistance, the output voltage will be kept at maximum value and the current will be lower.\\
 
-    There is a corresponding maximum regulation for voltage-controlled power supply. \SI{30}{\volt} maximum voltage can be given to a resistance of $R = U/I = \SI{30}{\volt} / \SI{2.0}{\ampere} = \SI{15}{\ohm}$. At lower resistance, the supply will not be able to provide enough current so that the voltage will drop.
+    There is a corresponding maximum regulation for voltage-controlled power supply. \SI{30}{\volt} maximum voltage can be given to a resistance of
+    \[
+      R = U/I = \SI{30}{\volt} / \SI{2.0}{\ampere} = \SI{15}{\ohm}.
+    \] At lower resistance, the supply will not be able to provide enough current so that the voltage will drop.
 \end{itemize}
 
 \subsection{Calibration of the Hall probe}
@@ -1016,7 +1019,6 @@ The following instruments are included in the line-up:
 It is difficult to produce Hall probes with exactly the same Hall constants. The Hall voltage that occurs at a given magnetic field and current may therefore vary slightly from probe to probe. In order to be able to use several probes for the same Gaussmeter, each probe has often assigned a calibration number which is used to adjust the gain of the Gaussmeter's voltmeter so that the meter shows the correct magnetic field. PASCO's sensors are adjusted and a calibration is not normally needed. Before use, the sensor must be reset.
 
 \textbf{Resetting:}
-\vspace{-4mm}
 \begin{itemize}
     \item Set the area knob on the sensor to position 1x and axial.
     \item Insert the probe into the zero field chamber and press the zero adjustment button.
@@ -1028,7 +1030,6 @@ It is difficult to produce Hall probes with exactly the same Hall constants. The
 \textbf{Note:} When changing the measuring range, make a new reset!
 
 \textbf{Units and signs of the Hall probe:}
-\vspace{-4mm}
 \begin{itemize}
     \item The meter shows the magnetic flux density, $B$, of the device you select in Capstone.
     \item The Gaussian meter shows \emph{positive} signs when the field lines have direction \emph{into} the cylindrical tip of the probe.
@@ -1077,6 +1078,76 @@ Which of these is best to use? Motivate your answer!
 %I våre eksperimenter er siste løsning den beste fordi vi da unngår korrigering av gaussmeteravlesningene pga. det varierende strøfeltet langs spoleaksen. Når Hallproben sitter fast vil strøfeltet rundt proben være konstant og kan nulles ut vha. gaussmeterets nullstilling og feltet fra spolen kan følgelig leses direkte. 
 
 \textbf{Procedure:}
+
+\begin{marginfigure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{fig/circuit_single_coil}
+  % \vspace{-4cm}
+  % \setlength{\unitlength}{0.6mm}
+  % \begin{picture}(120,20)(20,0)
+  %   \put(30,5){\line(1,0){88}}
+  %   \put(118,5){\line(0,1){23}}
+  %   \put(30,5){\line(0,1){14}}
+  %   \qbezier(118, 28)(124, 28)(129,35)
+  %   \qbezier(129, 35)(132, 40)(132,45)
+  %   \qbezier(132,45)(132, 52)(125,58)
+  %   \qbezier(125,58)(117, 63)(108,58)
+  %   \qbezier(108,58)(102, 54)(101,45)
+  %   \qbezier(101,45)(101, 38)(105,34.5)
+  %   \qbezier(105,34.5)(109, 30)(115,30)
+  %     %   \color{red}
+  %   \qbezier(115,30)(126, 31)(129,40)
+  %   \qbezier(129,40)(132, 55)(118,58)
+  %   \qbezier(118,58)(105, 59)(103,45)
+  %   \qbezier(103,45)(102, 35)(114,32)
+  %   \put(120,10){\Large$\uparrow$}%
+  %   \put(125,10){\large$I$}%
+  
+  %   \put(50,15){\framebox(15,25)}%Multimeter
+  %   \put(52.5,32){\framebox(10,5)}%Multimeter display
+  %   \put(56,20){\circle{3}}%
+  %   \put(55,18.7){\small$\bullet$}%
+  %   \put(62,20){\circle{3}}%
+  %   \put(60.7,18.7){\small$\bullet$}%
+  
+  %   \put(61.5,20){\line(1,0){53}}
+  %   \put(114,32){\line(0,-1){12}}
+  %   \put(52,16){\tiny\sf COM}%
+  %   \put(60,16){\tiny\sf 10A}% 
+  %   \put(45,45){\sf Multimeter}%
+  %     %   \color{red}
+  %   \put(114,20){\circle{3}}%
+  %   \put(113,18.7){\small$\bullet$}%
+  %   \put(118,20){\circle{3}}%
+  %   \put(116.7,18.7){\small$\bullet$}%
+  %   \put(100,22){\sf Blue}%
+  %   \put(119,22){\sf Red}%
+  %     %   \color{green}
+  %     %%%%%%%%%   Mascot begins
+  %   \put(20,15){\framebox(20,34)}%Mascot
+  %   \put(22,40){\framebox(9,5)}%Mascot
+  %   \put(35,43){\framebox(3,5)}%Mascot
+  %   \put(35,36){\framebox(3,5)}%Mascot
+  %   \put(35,29){\framebox(3,5)}%Mascot
+  %   \put(30,20){\circle{3}}%
+  %   \put(28.8,18.7){\small$\bullet$}%
+  %   \put(36,20){\circle{3}}%
+  %   \put(34.6,18.7){\small$\bullet$}%
+  %   \put(28,23){$+$}%
+  %   \put(34,23){$-$}%
+  %   \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
+  %   \put(23,54){\sf Mascot}%
+  %     %%%%%%%%%   Mascit ends
+  %     %   \put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
+  % \end{picture}
+  \caption{%
+    The coil circuit.
+    Mascot power supply, multimeter, and the coil are shown.
+    Note the direction of the windings, and where the coil is here shown from the direction of the connectors on the coil.
+  }
+  \label{magnetfelt.fig6}
+\end{marginfigure}
+%
 \begin{itemize}
     \item Mount the rotation sensor on the stand.
     \item Connect the sensors to the interface and the interface of the computer. Start Capstone and get ready for data sampling.
@@ -1092,75 +1163,6 @@ Which of these is best to use? Motivate your answer!
     IMPORTANT: The power supply must be switched off during connection. Select current measurement on both the power supply and the multimeter. Use the 10A input on the multimeter.\\
     - Ask the lab supervisor to approve the connection.
     \item Reset the magnetic field sensor. (It is safest to break the coil circuit during zeroing.)
-      \begin{marginfigure}[-10cm]
-        \centering
-        \includegraphics[width=0.8\textwidth]{fig/circuit_single_coil}
-        % \vspace{-4cm}
-        % \setlength{\unitlength}{0.6mm}
-        % \begin{picture}(120,20)(20,0)
-        %     \put(30,5){\line(1,0){88}}
-        %     \put(118,5){\line(0,1){23}}
-        %     \put(30,5){\line(0,1){14}}
-        %     \qbezier(118, 28)(124, 28)(129,35)
-        %     \qbezier(129, 35)(132, 40)(132,45)
-        %     \qbezier(132,45)(132, 52)(125,58)
-        %     \qbezier(125,58)(117, 63)(108,58)
-        %     \qbezier(108,58)(102, 54)(101,45)
-        %     \qbezier(101,45)(101, 38)(105,34.5)
-        %     \qbezier(105,34.5)(109, 30)(115,30)
-        %     %\color{red}
-        %     \qbezier(115,30)(126, 31)(129,40)
-        %     \qbezier(129,40)(132, 55)(118,58)
-        %     \qbezier(118,58)(105, 59)(103,45)
-        %     \qbezier(103,45)(102, 35)(114,32)
-        %     \put(120,10){\Large$\uparrow$}%
-        %     \put(125,10){\large$I$}%
-            
-        %     \put(50,15){\framebox(15,25)}%Multimeter
-        %     \put(52.5,32){\framebox(10,5)}%Multimeter display
-        %     \put(56,20){\circle{3}}%
-        %     \put(55,18.7){\small$\bullet$}%
-        %     \put(62,20){\circle{3}}%
-        %     \put(60.7,18.7){\small$\bullet$}%
-            
-        %     \put(61.5,20){\line(1,0){53}}
-        %     \put(114,32){\line(0,-1){12}}
-        %     \put(52,16){\tiny\sf COM}%
-        %     \put(60,16){\tiny\sf 10A}% 
-        %     \put(45,45){\sf Multimeter}%
-        %     %\color{red}
-        %     \put(114,20){\circle{3}}%
-        %     \put(113,18.7){\small$\bullet$}%
-        %     \put(118,20){\circle{3}}%
-        %     \put(116.7,18.7){\small$\bullet$}%
-        %     \put(100,22){\sf Blue}%
-        %     \put(119,22){\sf Red}%
-        %     %\color{green}
-        %     %%%%%%%%%Mascot begins
-        %     \put(20,15){\framebox(20,34)}%Mascot
-        %     \put(22,40){\framebox(9,5)}%Mascot
-        %     \put(35,43){\framebox(3,5)}%Mascot
-        %     \put(35,36){\framebox(3,5)}%Mascot
-        %     \put(35,29){\framebox(3,5)}%Mascot
-        %     \put(30,20){\circle{3}}%
-        %     \put(28.8,18.7){\small$\bullet$}%
-        %     \put(36,20){\circle{3}}%
-        %     \put(34.6,18.7){\small$\bullet$}%
-        %     \put(28,23){$+$}%
-        %     \put(34,23){$-$}%
-        %     \put(35,20){\line(1,0){22}}%Mascot-to-Multimeter
-        %     \put(23,54){\sf Mascot}%
-        %     %%%%%%%%%Mascit ends
-        %     %\put(90,70){\dashbox{0.2}(40,10)}%upper rectangle
-        % \end{picture}
-        \caption{%
-            The coil circuit.
-            Mascot power supply, multimeter, and the coil are shown.
-            Note the direction of the windings, and where the coil is here shown from the direction of the connectors on the coil.
-        }
-        \label{magnetfelt.fig6}
-    \end{marginfigure}
-
     \item Measure the magnetic field $B(x)$ along the axis of the coil as a function of the distance $x$ from the center plane of the coil.
     %\footnote{TIPS: Definer spolens midtplan på følgende måte: Finn magnetfeltets maksimumsverdi. Finn to posisjoner på hver side av spolens midtplan hvor magnetfeltene er like og ligger ca \SI{5}{\percent} under maksimumsverdien. Midtplanet ligger midt i mellom disse to posisjonene.}
     \sidenote{Remember: maximum coil current is \SI{1.0}{\ampere}. Check that you do not have a drift in the measurement.}
