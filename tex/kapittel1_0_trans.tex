@@ -153,7 +153,7 @@ In addition to the above, it is important to be aware that high-frequency electr
 %   \vspace*{-0.7cm}
 % \end{table}
 
-\begin{table*}[h]
+\begin{table}[h]
   \centering
   \begin{tabular}{llc}
     \hline
@@ -164,21 +164,22 @@ In addition to the above, it is important to be aware that high-frequency electr
     \multicolumn{2}{l}{Occupational\textsuperscript{b}} & \\
                                                  & Exposure of head and trunk & \SI{2}{\tesla}\\
                                                  & Exposure of limbs\textsuperscript{c} & \SI{8}{\tesla}\\
-    %%%% 
+                                                 %%%% 
     \multicolumn{2}{l}{General public\textsuperscript{b}} & \\
                                                  & Exposure to any part of the body & \SI{400}{\milli\tesla}\\
     \hline
   \end{tabular}
+  \begin{enumerate}[label=\textsuperscript{\alph*}]
+    \footnotesize
+  \item ICNIRP recommends that these limits should be viewed operationally as spatial peak exposure limits.\\
+  \item For specific work applications, exposure up to \SI{8}{\tesla} can be justified, if the environment is controlled and appropriate work practices are implemented to control movement-induced effects.\\
+  \item Not enough information is available on which to base exposure limits beyond \SI{8}{\tesla}.\\
+  \item Because of potential indirect adverse effects, ICNIRP recognizes that practical policies need to be implemented to prevent inadvertent harmful exposure of persons with implanted electronic medical devices and implants containing ferromagnetic material, and dangers from flying objects, which can lead to much lower restriction levels such as \SI[output-decimal-marker = {.}]{0.5}{\milli\tesla}.
+  \end{enumerate}
   \caption{Limits of exposure\textsuperscript{a} to static magnetic fields.\\
-    \footnotesize{
-        \textsuperscript{a} ICNIRP recommends that these limits should be viewed operationally as spatial peak exposure limits.\\
-        \textsuperscript{b} For specific work applications, exposure up to \SI{8}{\tesla} can be justified, if the environment is controlled and appropriate work practices are implemented to control movement-induced effects.\\
-        \textsuperscript{c} Not enough information is available on which to base exposure limits beyond \SI{8}{\tesla}.\\
-        \textsuperscript{d} Because of potential indirect adverse effects, ICNIRP recognizes that practical policies need to be implemented to prevent inadvertent harmful exposure of persons with implanted electronic medical devices and implants containing ferromagnetic material, and dangers from flying objects, which can lead to much lower restriction levels such as \SI[output-decimal-marker = {.}]{0.5}{\milli\tesla}.
-      }
-    }
+  }
   \label{tab:exposurlimits}
-\end{table*}
+\end{table}
 %
 % \begin{figure}[!ht]
 %     \centering
