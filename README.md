@@ -26,7 +26,7 @@ Either move where in the code the figure is positioned, or add an offset, such a
 See the [example document](https://github.com/fmarotta/kaobook/blob/31deae764f3901e5616ca3c3fbe5473d4b75c2d2/example_and_documentation.pdf) for more details.
 
 # Strucutre of the document
-The main file of the document i `Elmag-labhefte-2021.tex`, which imports files from the `tex` folder.
+The main file of the document i `Elmag-labhefte-2022.tex`, which imports files from the `tex` folder.
 Each chapter is in its own file in the `tex` folder, with the English version having the name `chaptername_english.tex`.
 The original Norwegian files, `chaptername.tex`, are kept for reference.
 
